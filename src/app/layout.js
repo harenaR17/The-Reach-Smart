@@ -22,7 +22,11 @@ export const metadata = {
   title: "Reach Smart — AI Автоматизации за SaaS & E-commerce",
   description: "AI автоматизации за SaaS и e-commerce: support агенти, lead generation системи, UGC генератор и post-purchase flows.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/logo.png", type: "image/png" },
+    ],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
