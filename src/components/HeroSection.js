@@ -1,10 +1,11 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { ArrowRightIcon } from "@/app/icons";
 
 export default function HeroSection({ activeCopy, setModalOpen, lang }) {
   const [chatMessages, setChatMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
+  const messagesContainerRef = useRef(null);
 
   const chatDialogue = [
     { sender: "user", text: { bg: "Здравейте, имате ли този продукт в кралско синьо?", en: "Hi, do you have this product in royal blue?" } },
@@ -39,6 +40,14 @@ export default function HeroSection({ activeCopy, setModalOpen, lang }) {
     play();
     return () => { active = false; clearTimeout(tid); };
   }, [lang]);
+
+  // Scroll only the phone-messages container — NOT the whole page
+  useEffect(() => {
+    const el = messagesContainerRef.current;
+    if (el) {
+      el.scrollTop = el.scrollHeight;
+    }
+  }, [chatMessages, isTyping]);
 
   return (
     <section className="hero-section">
@@ -81,12 +90,10 @@ export default function HeroSection({ activeCopy, setModalOpen, lang }) {
                 </div>
               </div>
             </div>
-            <div className="phone-messages">
+            {/* Scrollable messages area — ref scoped here, scrollTop used instead of scrollIntoView */}
+            <div className="phone-messages" ref={messagesContainerRef}>
               {chatMessages.map((msg, i) => (
-                <div
-                  key={i}
-                  className={`chat-bubble chat-bubble-${msg.sender}`}
-                >
+                <div key={i} className={`chat-bubble chat-bubble-${msg.sender}`}>
                   {msg.text}
                 </div>
               ))}

@@ -517,6 +517,13 @@ h1, h2, h3, h4, h5, h6 {
   gap: 10px;
   overflow-y: auto;
   scroll-behavior: smooth;
+  /* Hide scrollbar visually — keep scroll behaviour */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+
+.phone-messages::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
 }
 
 .chat-bubble {
