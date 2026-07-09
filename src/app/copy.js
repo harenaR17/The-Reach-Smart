@@ -21,22 +21,22 @@ export const copy = {
         { text: "изграждаме", type: "purple" },
         { text: `.`, type: "plain" },
       ],
-      subheadline: "А ти не пипаш нищо. Reach Smart изгражда AI автоматизации за SaaS и e-commerce бизнеси — от support и продажби до съдържание и follow-up. Всеки процес, който изяжда времето на екипа ти, може да работи сам.",
+      subheadline: "А ти не пипаш нищо. Reach Smart изгражда AI автоматизации за SaaS и e-commerce бизнеси: от support и продажби до съдържание и follow-up. Всеки процес, който изяжда времето на екипа ти, може да работи сам.",
       cta: "Запази безплатен разговор",
       microcopy: "30 минути. Без ангажимент. Излизаш с конкретен план какво да автоматизираш първо.",
     },
     problem: {
       eyebrow: "Проблемът",
       headline: "Ръстът ти е ограничен от часовете в денонощието. А те не се увеличават.",
-      body1: "Всеки бизнес удря таван — този, който поставят хората ти. Поддръжката отговаря на едни и същи въпроси стотици пъти. Продавачите ровят за контакти, вместо да затварят сделки. Маркетингът чака седмици за креативи, докато конкуренцията тества десетки вариации на ден. А клиентът, който купи миналия месец? Никой не му е писал от тогава.",
-      body2: "Можеш да наемеш още хора — и леко да повдигнеш тавана, на много по-висока цена. Или можеш да премахнеш от уравнението всичко, което не изисква човешка намеса.",
+      body1: "Всеки бизнес удря таван, този, който поставят хората ти. Поддръжката отговаря на едни и същи въпроси стотици пъти. Продавачите ровят за контакти, вместо да затварят сделки. Маркетингът чака седмици за креативи, докато конкуренцията тества десетки вариации на ден. А клиентът, който купи миналия месец? Никой не му е писал от тогава.",
+      body2: "Можеш да наемеш още хора, и леко да повдигнеш тавана, на много по-висока цена. Или можеш да премахнеш от уравнението всичко, което не изисква човешка намеса.",
       body3: "",
       punchline: "Проблемът не е в екипа. Проблемът е, че половината им ден отива за роботска работа.",
     },
     solution: {
       eyebrow: "Решението",
       headline: "Системи, които работят, дори когато ти не можеш.",
-      body1: "Ние не продаваме „AI“ просто защото е модерно. Ние изграждаме конкретни автоматизации, които вършат конкретна работа — отговарят на клиенти, намират потенциални клиенти, произвеждат съдържание, връщат купувачи. Всяка от тях връща часове. Заедно променят начина, по който бизнесът ти расте.",
+      body1: "Ние не продаваме „AI“ просто защото е модерно. Ние изграждаме конкретни автоматизации, които вършат конкретна работа: отговарят на клиенти, намират потенциални клиенти, произвеждат съдържание, връщат купувачи. Всяка от тях връща часове. Заедно променят начина, по който бизнесът ти расте.",
       body2: "Ти виждаш само резултата: решени тикети, пълен pipeline, свежи креативи и клиенти, които се връщат.",
     },
     services: {
@@ -79,7 +79,7 @@ export const copy = {
             problem: "Търговците губеха по 2.5 часа дневно в търсене на компании и контакти. Закупените бази данни бяха с над 25% невалидни контакти.",
             solution: "AI система за намиране на потенциални клиенти по точни критерии (размер, сигнали за покупка), доставяща готови контакти всеки ден.",
             results: [
-              "350–500 квалифицирани потенциални клиенти месечно",
+              "350-500 квалифицирани потенциални клиенти месечно",
               "Време за проучване: намалено от 2.5 часа дневно до почти нула",
               "До 40% повече разговори с потенциални клиенти седмично",
               "30% по-ниска цена за привличане на квалифициран лийд"
@@ -94,15 +94,15 @@ export const copy = {
           result: "Квалифицирани разговори, които идват при теб, вместо ти да ги гониш.",
           icon: "outreach",
           caseStudy: {
-            title: "От нула изходящи имейли до 20-35 срещи месечно — без писане на ръка",
+            title: "От нула изходящи имейли до 20-35 срещи месечно, без писане на ръка",
             client: "Развиваща се B2B SaaS компания, founder-led продажби, без SDR екип",
             problem: "Входящите запитвания бяха непредвидими. Основателят нямаше време за outbound имейли, а наемането на SDR струваше €80,000+ годишно.",
             solution: "Интегрирана система за автоматично намиране на лийдове и изпращане на силно персонализирани имейли спрямо бизнес контекста им.",
             results: [
               "Около 2 000 персонализирани имейла изпратени месечно",
               "40% средна отваряемост и около 8% отговор",
-              "20–35 квалифицирани срещи, записани месечно",
-              "3–6 нови клиенти, генерирани от системата"
+              "20-35 квалифицирани срещи, записани месечно",
+              "3-6 нови клиенти, генерирани от системата"
             ]
           }
         },
@@ -138,13 +138,13 @@ export const copy = {
           caseStudy: {
             title: "90 UGC видеа месечно на цената на 3 от реални създатели",
             client: "DTC онлайн магазин, Meta бюджет €30 000/месец, 6 нови продукта месечно",
-            problem: "Всяка реклама чакаше 3 седмици и струваше €250–400 на видео. Рекламите бързо „изгаряха“, а тестването беше скъп лукс.",
+            problem: "Всяка реклама чакаше 3 седмици и струваше €250-400 на видео. Рекламите бързо „изгаряха“, а тестването беше скъп лукс.",
             solution: "AI система за генериране на UGC-стил продуктови видеа директно от снимки и описания в рамките на часове.",
             results: [
               "Тестване на рекламни варианти: от 15 до 90 криейтива месечно",
               "Време от нов продукт до реклама: от 3 седмици до 1 ден",
               "Намаляване на цената за създаване на видео с около 80%",
-              "Намаляване на цената за рекламен резултат с 15–25%"
+              "Намаляване на цената за рекламен резултат с 15-25%"
             ]
           }
         },
@@ -152,7 +152,7 @@ export const copy = {
           title: "AI Post-Purchase Flow System",
           hook: "Продажбата не свършва с „Поръчката е приета“. Там започва следващата.",
           desc: "Автоматично проследява клиента след покупка: ъпдейти за поръчката, персонализирани upsell и cross-sell оферти, заявка за ревю. Всяко нещо е в правилния момент от пътя на клиента, а не като спам на третия ден.",
-          extra: "Системата разпознава кога клиентът е получил пратката си и изпраща поканата за ревю едва тогава — когато е доволен и е имал време да изпробва продукта, вместо да го спами, докато пакетът все още е в куриера.",
+          extra: "Системата разпознава кога клиентът е получил пратката си и изпраща поканата за ревю едва тогава, когато е доволен и е имал време да изпробва продукта, вместо да го спами, докато пакетът все още е в куриера.",
           result: "Еднократни купувачи, които стават редовни, и ревюта, които се трупат сами, без нито един ръчен follow-up.",
           icon: "refresh",
           caseStudy: {
@@ -212,7 +212,7 @@ export const copy = {
         },
         {
           val: "< 30 сек",
-          label: "време за реакция, намалено от 6–8 часа средно за индустрията",
+          label: "време за реакция, намалено от 6-8 часа средно за индустрията",
           desc: "Скорост на отговор",
         },
         {
@@ -230,10 +230,10 @@ export const copy = {
         results: [
           "2000 изпратени имейла месечно с около 8% отговор",
           "30+ проведени квалифицирани разговора всеки месец",
-          "3–6 нови клиенти, генерирани от outbound системата ни",
+          "3-6 нови клиенти, генерирани от outbound системата ни",
           "0 часа изгубени в ръчно търсене на контакти (напълно автоматизирано)"
         ],
-        whyShow: "Защо ти го показваме: Защото най-честният отговор на „а вие ползвате ли това, което продавате?\" е страница с числата. Ядем собствената си храна — и тя ни докара клиентите, чиито резултати четеш по-горе."
+        whyShow: "Защо ти го показваме: Защото най-честният отговор на „а вие ползвате ли това, което продавате?\" е страница с числата. Ядем собствената си храна, и тя ни докара клиентите, чиито резултати четеш по-горе."
       }
     },
     whyUs: {
@@ -248,34 +248,38 @@ export const copy = {
       headline: "Въпроси, на които отговаряме веднага",
       items: [
         {
-          q: "Клиентите ще усетят ли, че говорят с AI?",
-          a: "Някои да, и това е окей. Важното е друго: клиентът получава отговор веднага, вместо да чака с часове. Тестовете ни показват, че хората предпочитат бърз отговор от AI пред бавен от човек. А за сложните случаи системата винаги прехвърля към теб.",
+          q: "С коя автоматизация да започнем?",
+          a: "С тази, която ще върне най-много най-бързо, а това зависи от бизнеса ти. Понякога е support-ът, понякога pipeline-ът, понякога криейтивите. Точно това изясняваме на първия разговор: гледаме процесите ти и ти казваме къде е най-голямата дупка.",
+        },
+        {
+          q: "Клиентите ще усетят ли, че си имат работа с AI?",
+          a: "При автоматизациите, които говорят с клиенти, някои ще усетят, и това е окей. Важното е друго: клиентът получава отговор веднага, вместо да чака с часове. А за сложните случаи системата винаги прехвърля към човек.",
         },
         {
           q: "Колко време отнема изграждането?",
-          a: "Зависи от системата, но повечето автоматизации са готови и активни до 3 седмици от първия разговор.",
+          a: "Зависи от системата, но повечето автоматизации са живи до 3 седмици от първия разговор.",
         },
         {
-          q: "Работи ли на български?",
-          a: "Да. Системите ни говорят и пишат на естествен български, което е едно от нещата, които тестваме най-внимателно преди пускане.",
+          q: "Ще работи ли с нашите инструменти?",
+          a: "Това е цялата идея. Строим около твоя stack: help desk, магазин, CRM, каквото ползваш, а не обратното. Разглеждаме го заедно на разговора.",
         },
         {
           q: "Колко струва?",
-          a: "Зависи какво изграждаме, затова първият разговор е безплатен. Излизаш с ясна цена и ясен обхват, преди да си платил евро. Едно е сигурно: пропуснатите обаждания и лийдове вече ти струват повече.",
+          a: "Зависи какво изграждаме, затова първият разговор е безплатен. Излизаш с ясна цена и ясен обхват, преди да си платил лев. Едно е сигурно: процесите, които сега вършиш ръчно, вече ти струват повече.",
         },
         {
-          q: "Ще ми трябва ли техническо познание?",
-          a: "Не. Ние строим, настройваме и поддържаме всичко. Ти получаваш резултата и подробен отчет какво е свършено.",
+          q: "Ще ни трябва ли техническо познание?",
+          a: "Не. Ние строим, настройваме и поддържаме. Ти получаваш резултата и отчет какво е свършено.",
         },
         {
           q: "Какво става, ако системата сгреши?",
-          a: "Първите седмици следим всеки разговор и донастройваме. След това получаваш резюмета и винаги имаш човешки контрол върху важните случаи.",
+          a: "Първите седмици следим всичко и донастройваме. След това получаваш редовни резюмета и винаги имаш човешки контрол върху важните случаи, независимо дали става дума за клиентски разговор, изпратен имейл или публикуван криейтив.",
         },
       ],
     },
     ctaSection: {
       headline: "Кой процес изяжда най-много от времето на екипа ти?",
-      body: "Support, продажби, съдържание, follow-up — все някъде изтича повече, отколкото подозираш. Запази 30 минути: ще минем през процесите ти и ще ти покажем точно кой струва най-скъпо и откъде да започнеш. Дори да не работим заедно, излизаш с ясна картина.",
+      body: "Support, продажби, съдържание, follow-up, все някъде изтича повече, отколкото подозираш. Запази 30 минути: ще минем през процесите ти и ще ти покажем точно кой струва най-скъпо и откъде да започнеш. Дори да не работим заедно, излизаш с ясна картина.",
       btn: "Запази безплатен разговор",
       microcopy: "Без ангажимент. Без техническо говорене. Само конкретен план.",
     },
@@ -325,7 +329,7 @@ export const copy = {
         { text: "build it", type: "purple" },
         { text: ".", type: "plain" },
       ],
-      subheadline: "And you didn't lift a finger. Reach Smart builds AI automations for SaaS and e-commerce companies — from support and sales to content and follow-up. Every process that eats your team's time can run on its own.",
+      subheadline: "And you didn't lift a finger. Reach Smart builds AI automations for SaaS and e-commerce companies, from support and sales to content and follow-up. Every process that eats your team's time can run on its own.",
       cta: "Book a Free Call",
       microcopy: "30 minutes. No strings attached. You'll walk away with a clear plan for what to automate first.",
     },
@@ -333,14 +337,14 @@ export const copy = {
       eyebrow: "The Problem",
       headline: "Your growth is capped by the hours in a day. And those aren't going up.",
       body1: "Every business hits the same ceiling: its people's time. Support answers the same questions hundreds of times. Salespeople dig for contacts instead of closing. Marketing waits weeks for creative while competitors test dozens of variations a day. And the customer who bought last month? Nobody's reached out since.",
-      body2: "You can hire more people — and raise the ceiling a little, at a much higher cost. Or you can remove everything from the equation that doesn't require a human.",
+      body2: "You can hire more people, and raise the ceiling a little, at a much higher cost. Or you can remove everything from the equation that doesn't require a human.",
       body3: "",
       punchline: "The problem isn't your team. The problem is that half their day goes to robot work.",
     },
     solution: {
       eyebrow: "The Solution",
       headline: "Systems that work when you can't.",
-      body1: "We don't sell \"AI\" because it's trendy. We build specific automations that do specific jobs — answer customers, find leads, produce content, bring buyers back. Each one returns hours on its own. Together, they change how your business grows.",
+      body1: "We don't sell \"AI\" because it's trendy. We build specific automations that do specific jobs: answer customers, find leads, produce content, bring buyers back. Each one returns hours on its own. Together, they change how your business grows.",
       body2: "All you see is the result: resolved tickets, a full pipeline, fresh creative, and customers who come back.",
     },
     services: {
@@ -383,7 +387,7 @@ export const copy = {
             problem: "Reps lost 2.5 hours every day searching for companies and decision-makers. Databases were often 25%+ invalid.",
             solution: "We built an AI lead finder scanning for target companies and decision-makers, delivering a clean list daily.",
             results: [
-              "350–500 qualified leads delivered every month",
+              "350-500 qualified leads delivered every month",
               "Research time reduced from 2.5 hours per day to almost zero",
               "Up to 40% more sales conversations held per week",
               "Cost per qualified lead 30% lower than traditional sources"
@@ -398,15 +402,15 @@ export const copy = {
           result: "Qualified conversations that come to you, instead of you chasing them.",
           icon: "outreach",
           caseStudy: {
-            title: "From zero outbound to 20-35 qualified conversations a month — without manual writing",
+            title: "From zero outbound to 20-35 qualified conversations a month, without manual writing",
             client: "Growing B2B SaaS, founder-led sales, no SDR team",
             problem: "Inbound was inconsistent. The founder had no time for outbound prospecting, and hiring an SDR cost €80k+ per year.",
             solution: "An integrated system combining AI lead finder and automated, highly-personalized outreach emails referencing recipient context.",
             results: [
               "Around 2,000 personalized emails sent monthly",
               "Approximately 40% average open rate and 8% reply rate",
-              "20–35 qualified conversations booked every month",
-              "3–6 new customers closed directly attributable to outbound"
+              "20-35 qualified conversations booked every month",
+              "3-6 new customers closed directly attributable to outbound"
             ]
           }
         },
@@ -442,13 +446,13 @@ export const copy = {
           caseStudy: {
             title: "90 UGC creatives a month for the price of 3 creator videos",
             client: "DTC e-commerce brand, €30k/month Meta budget, 6 new products monthly",
-            problem: "Ad creatives took 3 weeks and €250–400 each to produce. Creative burnout was fast and testing variations was too expensive.",
+            problem: "Ad creatives took 3 weeks and €250-400 each to produce. Creative burnout was fast and testing variations was too expensive.",
             solution: "AI video generator producing talking-to-camera demos and testimonials directly from listings and images.",
             results: [
               "Creative testing increased from 15 to 90 creatives per month",
               "Product launch to first ad reduced from 3 weeks to 1 day",
               "Content production costs reduced by around 80%",
-              "Advertising cost per result reduced by 15–25%"
+              "Advertising cost per result reduced by 15-25%"
             ]
           }
         },
@@ -456,7 +460,7 @@ export const copy = {
           title: "AI Post-Purchase Flow System",
           hook: "The sale doesn't end at “Order confirmed.” That's where the next one starts.",
           desc: "Automatically follows up after every purchase: order updates, personalized upsell and cross-sell offers, and review requests, with each one timed to the right moment in the customer journey, not blasted out on day three.",
-          extra: "The system knows exactly when the customer receives their package and sends the review request only then — when they are happy and have had time to try the product, instead of spamming them while the box is still with the courier.",
+          extra: "The system knows exactly when the customer receives their package and sends the review request only then, when they are happy and have had time to try the product, instead of spamming them while the box is still with the courier.",
           result: "One-time buyers who become repeat customers, and social proof that stacks up on its own, without a single manual follow-up.",
           icon: "refresh",
           caseStudy: {
@@ -534,10 +538,10 @@ export const copy = {
         results: [
           "Around 2,000 emails sent monthly with an ~8% reply rate",
           "30+ qualified conversations booked and held every month",
-          "3–6 new customers closed directly attributable to outbound",
+          "3-6 new customers closed directly attributable to outbound",
           "0 hours spent on manual prospecting (completely automated)"
         ],
-        whyShow: "Why we're showing you this: Because the most honest answer to 'do you actually use what you sell?' is a page with the numbers on it. We eat our own cooking — and it brought in the customers whose results you just read."
+        whyShow: "Why we're showing you this: Because the most honest answer to 'do you actually use what you sell?' is a page with the numbers on it. We eat our own cooking, and it brought in the customers whose results you just read."
       }
     },
     whyUs: {
@@ -552,20 +556,24 @@ export const copy = {
       headline: "Questions we answer right away",
       items: [
         {
-          q: "Will customers know they're talking to AI?",
-          a: "Some will, and that's fine. What matters is this: they get an answer instantly instead of waiting hours. In our testing, people consistently prefer a fast answer from AI over a slow one from a human. And for complex cases, the system always hands off to your team.",
+          q: "Which automation should we start with?",
+          a: "The one that returns the most, fastest, and that depends on your business. Sometimes it's support, sometimes it's pipeline, sometimes it's creative. That's exactly what the first call is for: we look at your processes and show you where the biggest leak is.",
+        },
+        {
+          q: "Will customers know they're dealing with AI?",
+          a: "For the customer-facing automations, some will, and that's fine. What matters is this: they get an answer instantly instead of waiting hours. And for complex cases, the system always hands off to a human.",
         },
         {
           q: "How long does it take to build?",
-          a: "Depends on the system, but most automations are live and active within 3 weeks of the first call.",
+          a: "Depends on the system, but most automations are live within 3 weeks of the first call.",
         },
         {
           q: "Will it work with our existing tools?",
-          a: "That's the whole point. We build around your stack (your help desk, your store, your CRM) and not the other way around. We'll map it out together on the call.",
+          a: "That's the whole point. We build around your stack: your help desk, your store, your CRM, whatever you run, not the other way around. We'll map it out together on the call.",
         },
         {
           q: "How much does it cost?",
-          a: "Depends on what we're building, which is exactly why the first call is free. You'll leave with a clear price and a clear scope before you've spent a dollar. One thing's certain: the tickets and leads slipping through right now are already costing you more.",
+          a: "Depends on what we're building, which is exactly why the first call is free. You'll leave with a clear price and a clear scope before you've spent a dollar. One thing's certain: the processes you're running manually right now are already costing you more.",
         },
         {
           q: "Do we need technical people on our side?",
@@ -573,13 +581,13 @@ export const copy = {
         },
         {
           q: "What happens when the system gets something wrong?",
-          a: "For the first few weeks we review every conversation and fine-tune. After that, you get summaries, and you always keep human control over the cases that matter.",
+          a: "For the first few weeks we monitor everything and fine-tune. After that, you get regular summaries and you always keep human control over the cases that matter, whether that's a customer conversation, an outbound email, or a published creative.",
         },
       ],
     },
     ctaSection: {
       headline: "Which process is eating most of your team's time?",
-      body: "Support, sales, content, follow-up — somewhere you're losing more than you realize. Book 30 minutes: we'll walk through your processes and show you exactly which one costs the most and where to start. Even if we don't work together, you'll walk away with a clear picture.",
+      body: "Support, sales, content, follow-up, somewhere you're losing more than you realize. Book 30 minutes: we'll walk through your processes and show you exactly which one costs the most and where to start. Even if we don't work together, you'll walk away with a clear picture.",
       btn: "Book a Free Call",
       microcopy: "No strings attached. No technical jargon. Just a clear plan.",
     },

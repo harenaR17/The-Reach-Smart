@@ -70,11 +70,6 @@ export default function ProofSection({ activeCopy, addToRefs, lang }) {
             </div>
           </div>
         )}
-
-        <div className="testimonial-card reveal" ref={addToRefs}>
-          <p className="testimonial-text">{activeCopy.proof.quote}</p>
-          <div className="testimonial-line" />
-        </div>
       </div>
     </section>
   );
