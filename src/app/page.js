@@ -151,6 +151,8 @@ export default function Home() {
           <ServicesSection
             activeCopy={activeCopy}
             addToRefs={addToRefs}
+            setModalOpen={setModalOpen}
+            lang={lang}
           />
           <HowItWorksSection
             activeCopy={activeCopy}
@@ -159,6 +161,7 @@ export default function Home() {
           <ProofSection
             activeCopy={activeCopy}
             addToRefs={addToRefs}
+            lang={lang}
           />
           <WhyUsSection
             activeCopy={activeCopy}

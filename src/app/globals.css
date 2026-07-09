@@ -138,14 +138,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .eyebrow {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brand-primary);
   margin-bottom: 1rem;
-  display: inline-block;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   text-shadow: 0 0 10px rgba(58, 91, 255, 0.3);
+}
+
+.hero-text .eyebrow {
+  display: inline-block;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Background utility classes */
@@ -334,6 +344,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   transition: all var(--duration-normal) var(--ease-out);
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .btn-primary {
@@ -782,10 +794,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .lineup-note {
   text-align: center;
-  margin-top: 3rem;
-  font-size: 0.9375rem;
-  color: var(--text-tertiary);
-  font-style: italic;
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.lineup-note p {
+  font-size: 1.125rem;
+  color: #FFF000;
+  font-weight: 500;
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: normal;
 }
 
 /* HOW IT WORKS PROCESS CARDS */
@@ -840,7 +862,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat-value {
-  font-size: 3rem;
+  font-size: clamp(1.85rem, 5vw, 2.5rem);
   font-weight: 900;
   margin-bottom: 0.75rem;
   font-family: var(--font-space-grotesk);
@@ -1208,5 +1230,275 @@ h1, h2, h3, h4, h5, h6 {
   /* Testimonial card tight padding */
   .testimonial-card {
     padding: 1.5rem;
+  }
+}
+
+/* ==========================================================================
+   NEW IMPROVEMENTS STYLING (Orbit Scene, Float Badge, Case Study Modal)
+   ========================================================================== */
+
+/* Orbit Scene & Floating Badges */
+.orbit-scene {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 1 / 1;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbit-glow {
+  position: absolute;
+  inset: -15%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(40px);
+}
+
+.orbit-ring {
+  position: absolute;
+  inset: 5%;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(58, 91, 255, 0.25);
+  pointer-events: none;
+  z-index: 1;
+  animation: spin 25s linear infinite;
+}
+
+.orbit-dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand-primary);
+  box-shadow: 0 0 12px var(--brand-primary);
+  transform: translate(-50%, -50%);
+}
+
+.orbit-center {
+  position: relative;
+  z-index: 2;
+}
+
+.center-ai-orb {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--gradient-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 700;
+  font-size: 1.85rem;
+  color: #ffffff;
+  box-shadow: 0 0 35px rgba(58, 91, 255, 0.5);
+  animation: pulse-glow 4s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orbit-badges-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.float-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.6rem 1rem;
+  border-radius: 14px;
+  background: rgba(14, 17, 48, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  pointer-events: auto;
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.float-badge-label {
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-weight: 500;
+}
+
+/* Positioning Utility Classes for Badges */
+.badge-top-left {
+  top: 10%;
+  left: -5%;
+}
+
+.badge-top-right {
+  top: 15%;
+  right: -8%;
+}
+
+.badge-bottom-left {
+  bottom: 15%;
+  left: -10%;
+}
+
+.badge-bottom-right {
+  bottom: 10%;
+  right: -5%;
+}
+
+.badge-mid-right {
+  top: 48%;
+  right: -12%;
+}
+
+/* Featured Case Study 7 Styling */
+.featured-case-card {
+  margin-top: 3.5rem;
+  padding: 2.5rem;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  background: var(--bg-raised);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-case-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-brand);
+}
+
+.featured-case-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+}
+
+.featured-case-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.featured-case-results {
+  background: rgba(8, 10, 26, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+}
+
+/* Case Study Modal Custom Styles */
+.case-study-modal-card {
+  max-width: 580px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-default);
+  background: var(--bg-raised);
+  position: relative;
+  overflow: hidden;
+}
+
+.case-study-modal-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-brand);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 35px rgba(58, 91, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 50px rgba(110, 58, 255, 0.7);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .badge-top-left { left: 0%; }
+  .badge-top-right { right: 0%; }
+  .badge-bottom-left { left: 0%; }
+  .badge-bottom-right { right: 0%; }
+  .badge-mid-right { right: -5%; }
+  .float-badge {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-case-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .featured-case-card {
+    padding: 1.5rem;
+  }
+  .case-study-modal-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .float-badge {
+    display: none; /* Hide floating badges on mobile screen widths to keep it tidy */
+  }
+  .orbit-scene {
+    max-width: 280px;
+    margin-top: 1rem;
+  }
+  .center-ai-orb {
+    width: 90px;
+    height: 90px;
+    font-size: 1.5rem;
   }
 }

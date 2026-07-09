@@ -1,53 +1,52 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import { ArrowRightIcon } from "@/app/icons";
+import OrbitScene from "./OrbitScene";
+import FloatBadge from "./FloatBadge";
 
 export default function HeroSection({ activeCopy, setModalOpen, lang }) {
-  const [chatMessages, setChatMessages] = useState([]);
-  const [isTyping, setIsTyping] = useState(false);
-  const messagesContainerRef = useRef(null);
-
-  const chatDialogue = [
-    { sender: "user", text: { bg: "Здравейте, имате ли този продукт в кралско синьо?", en: "Hi, do you have this product in royal blue?" } },
-    { sender: "ai",   text: { bg: "Да! Току-що заредихме. Искате ли да добавя едно в количката Ви?", en: "Yes! We just restocked. Would you like me to add one to your cart?" } },
-    { sender: "user", text: { bg: "Да, моля! Колко трае доставката?", en: "Yes please! How long does shipping take?" } },
-    { sender: "ai",   text: { bg: "Готово! 1–2 работни дни. Ще Ви изпратя линк за проследяване.", en: "Done! 1–2 business days. I'll send you a tracking link." } },
-    { sender: "user", text: { bg: "Благодаря за бързата помощ!", en: "Thanks for the fast help!" } },
-    { sender: "ai",   text: { bg: "За мен е удоволствие! На Ваше разположение денонощно.", en: "My pleasure! Here for you 24/7." } },
+  const heroBadges = [
+    {
+      icon: "💬",
+      label: "AI Chat Support",
+      iconBg: "rgba(58, 91, 255, 0.2)",
+      iconColor: "#3A5BFF",
+      delay: 0,
+      className: "badge-top-left",
+    },
+    {
+      icon: "🎯",
+      label: "Lead Finder",
+      iconBg: "rgba(110, 58, 255, 0.2)",
+      iconColor: "#6E3AFF",
+      delay: 0.8,
+      className: "badge-top-right",
+    },
+    {
+      icon: "✉",
+      label: "Outreach System",
+      iconBg: "rgba(160, 164, 192, 0.2)",
+      iconColor: "#A0A4C0",
+      delay: 1.6,
+      className: "badge-bottom-left",
+    },
+    {
+      icon: "🎥",
+      label: "UGC Content",
+      iconBg: "rgba(239, 68, 68, 0.2)",
+      iconColor: "#EF4444",
+      delay: 0.4,
+      className: "badge-bottom-right",
+    },
+    {
+      icon: "🔄",
+      label: "Post-Purchase Flow",
+      iconBg: "rgba(16, 185, 129, 0.2)",
+      iconColor: "#10B981",
+      delay: 1.2,
+      className: "badge-mid-right",
+    },
   ];
-
-  useEffect(() => {
-    let active = true;
-    let tid;
-    const play = async () => {
-      setChatMessages([]);
-      for (const msg of chatDialogue) {
-        if (!active) return;
-        if (msg.sender === "ai") {
-          setIsTyping(true);
-          await new Promise(r => { tid = setTimeout(r, 1400); });
-          setIsTyping(false);
-        } else {
-          await new Promise(r => { tid = setTimeout(r, 700); });
-        }
-        if (!active) return;
-        setChatMessages(prev => [...prev, { sender: msg.sender, text: msg.text[lang] }]);
-        await new Promise(r => { tid = setTimeout(r, 1800); });
-      }
-      await new Promise(r => { tid = setTimeout(r, 3500); });
-      if (active) play();
-    };
-    play();
-    return () => { active = false; clearTimeout(tid); };
-  }, [lang]);
-
-  // Scroll only the phone-messages container — NOT the whole page
-  useEffect(() => {
-    const el = messagesContainerRef.current;
-    if (el) {
-      el.scrollTop = el.scrollHeight;
-    }
-  }, [chatMessages, isTyping]);
 
   return (
     <section className="hero-section">
@@ -76,36 +75,17 @@ export default function HeroSection({ activeCopy, setModalOpen, lang }) {
           </div>
         </div>
 
-        {/* Right phone mockup */}
+        {/* Right orbit scene */}
         <div className="hero-mockup-wrapper">
-          <div className="phone-mockup">
-            <div className="phone-island" />
-            <div className="phone-header">
-              <div className="phone-avatar">AI</div>
-              <div>
-                <div className="phone-agent-name">Reach Smart Agent</div>
-                <div className="phone-status">
-                  <span className="status-dot" />
-                  Active 24/7
-                </div>
-              </div>
-            </div>
-            {/* Scrollable messages area — ref scoped here, scrollTop used instead of scrollIntoView */}
-            <div className="phone-messages" ref={messagesContainerRef}>
-              {chatMessages.map((msg, i) => (
-                <div key={i} className={`chat-bubble chat-bubble-${msg.sender}`}>
-                  {msg.text}
-                </div>
-              ))}
-              {isTyping && (
-                <div className="chat-bubble chat-bubble-ai">
-                  <div className="typing-dots">
-                    <span /><span /><span />
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+          <OrbitScene
+            badges={heroBadges.map((b, i) => (
+              <FloatBadge key={i} {...b} />
+            ))}
+            showRing={true}
+            showGlow={true}
+          >
+            <div className="center-ai-orb">AI</div>
+          </OrbitScene>
         </div>
       </div>
     </section>

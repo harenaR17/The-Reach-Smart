@@ -8,7 +8,10 @@ export default function SolutionSection({ activeCopy, addToRefs }) {
         <div className="prose-max centered reveal" ref={addToRefs}>
           <span className="eyebrow">{activeCopy.solution.eyebrow}</span>
           <h2 className="section-h2">{activeCopy.solution.headline}</h2>
-          <p className="body-lg">{activeCopy.solution.body}</p>
+          <div className="prose-stack" style={{ marginTop: "1.5rem" }}>
+            {activeCopy.solution.body1 && <p className="body-lg">{activeCopy.solution.body1}</p>}
+            {activeCopy.solution.body2 && <p className="body" style={{ marginTop: "0.5rem" }}>{activeCopy.solution.body2}</p>}
+          </div>
           <div className="divider-line" />
         </div>
       </div>
