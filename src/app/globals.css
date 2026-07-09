@@ -918,14 +918,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 0%;
+  height: var(--line-fill, 0%);
   background: var(--gradient-brand);
-  transition: height 0.8s var(--ease-out);
   border-radius: 2px;
-}
-
-.timeline-line--active::after {
-  height: 100%;
 }
 
 /* Right column: content card */
