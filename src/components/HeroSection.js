@@ -58,9 +58,25 @@ export default function HeroSection({ activeCopy, setModalOpen, lang }) {
         <div className="hero-text">
           <span className="eyebrow">{activeCopy.hero.eyebrow}</span>
           <h1 className="hero-h1">
-            {activeCopy.hero.headlinePrefix}
-            <span className="gradient-text">{activeCopy.hero.headlineHighlight}</span>
-            {activeCopy.hero.headlineSuffix}
+            {activeCopy.hero.headlineParts.map((part, i) => {
+              if (part.text.startsWith(". ")) {
+                const rest = part.text.substring(1); // keeps space after dot
+                return (
+                  <React.Fragment key={i}>
+                    <span>.</span>
+                    <br />
+                    <span>{rest.trimStart()}</span>
+                  </React.Fragment>
+                );
+              }
+              if (part.type === "red") {
+                return <span key={i} className="gradient-text-red">{part.text}</span>;
+              }
+              if (part.type === "purple") {
+                return <span key={i} className="gradient-text">{part.text}</span>;
+              }
+              return <span key={i}>{part.text}</span>;
+            })}
           </h1>
           <p className="hero-sub">{activeCopy.hero.subheadline}</p>
           <div className="hero-cta-group">

@@ -10,9 +10,17 @@ export const copy = {
     },
     hero: {
       eyebrow: "AI автоматизации за бизнеса",
-      headlinePrefix: "Поддръжката отговаря. Pipeline-ът се пълни. ",
-      headlineHighlight: "Клиентите се връщат.",
-      headlineSuffix: "",
+      headlineParts: [
+        { text: `Ако `, type: "plain" },
+        { text: "се повтаря", type: "red" },
+        { text: ", го ", type: "plain" },
+        { text: "автоматизираме", type: "purple" },
+        { text: ". Ако ", type: "plain" },
+        { text: "липсва", type: "red" },
+        { text: ", го ", type: "plain" },
+        { text: "изграждаме", type: "purple" },
+        { text: `.`, type: "plain" },
+      ],
       subheadline: "А ти не пипаш нищо. Reach Smart изгражда AI автоматизации за SaaS и e-commerce бизнеси — от support и продажби до съдържание и follow-up. Всеки процес, който изяжда времето на екипа ти, може да работи сам.",
       cta: "Запази безплатен разговор",
       microcopy: "30 минути. Без ангажимент. Излизаш с конкретен план какво да автоматизираш първо.",
@@ -304,9 +312,19 @@ export const copy = {
     },
     hero: {
       eyebrow: "AI Automations for Business",
-      headlinePrefix: "Support answered. Pipeline full. ",
-      headlineHighlight: "Customers coming back.",
-      headlineSuffix: "",
+      headlineParts: [
+        {
+          text: "If it ", type: "plain"
+        },
+        { text: "repeats", type: "red" },
+        { text: ", we ", type: "plain" },
+        { text: "automate it", type: "purple" },
+        { text: ". If it ", type: "plain" },
+        { text: "doesn’t exist", type: "red" },
+        { text: ", we ", type: "plain" },
+        { text: "build it", type: "purple" },
+        { text: ".", type: "plain" },
+      ],
       subheadline: "And you didn't lift a finger. Reach Smart builds AI automations for SaaS and e-commerce companies — from support and sales to content and follow-up. Every process that eats your team's time can run on its own.",
       cta: "Book a Free Call",
       microcopy: "30 minutes. No strings attached. You'll walk away with a clear plan for what to automate first.",
