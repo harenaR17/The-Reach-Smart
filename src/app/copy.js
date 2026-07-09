@@ -96,7 +96,7 @@ export const copy = {
           caseStudy: {
             title: "От нула изходящи имейли до 20-35 срещи месечно — без писане на ръка",
             client: "Развиваща се B2B SaaS компания, founder-led продажби, без SDR екип",
-            problem: "Входящите запитвания бяха непредвидими. Основателят нямаше време за outbound имейли, а наемането на SDR струваше $80,000+ годишно.",
+            problem: "Входящите запитвания бяха непредвидими. Основателят нямаше време за outbound имейли, а наемането на SDR струваше €80,000+ годишно.",
             solution: "Интегрирана система за автоматично намиране на лийдове и изпращане на силно персонализирани имейли спрямо бизнес контекста им.",
             results: [
               "Около 2 000 персонализирани имейла изпратени месечно",
@@ -137,8 +137,8 @@ export const copy = {
           icon: "video",
           caseStudy: {
             title: "90 UGC видеа месечно на цената на 3 от реални създатели",
-            client: "DTC онлайн магазин, Meta бюджет $30 000/месец, 6 нови продукта месечно",
-            problem: "Всяка реклама чакаше 3 седмици и струваше $250–400 на видео. Рекламите бързо „изгаряха“, а тестването беше скъп лукс.",
+            client: "DTC онлайн магазин, Meta бюджет €30 000/месец, 6 нови продукта месечно",
+            problem: "Всяка реклама чакаше 3 седмици и струваше €250–400 на видео. Рекламите бързо „изгаряха“, а тестването беше скъп лукс.",
             solution: "AI система за генериране на UGC-стил продуктови видеа директно от снимки и описания в рамките на часове.",
             results: [
               "Тестване на рекламни варианти: от 15 до 90 криейтива месечно",
@@ -400,7 +400,7 @@ export const copy = {
           caseStudy: {
             title: "From zero outbound to 20-35 qualified conversations a month — without manual writing",
             client: "Growing B2B SaaS, founder-led sales, no SDR team",
-            problem: "Inbound was inconsistent. The founder had no time for outbound prospecting, and hiring an SDR cost $80k+ per year.",
+            problem: "Inbound was inconsistent. The founder had no time for outbound prospecting, and hiring an SDR cost €80k+ per year.",
             solution: "An integrated system combining AI lead finder and automated, highly-personalized outreach emails referencing recipient context.",
             results: [
               "Around 2,000 personalized emails sent monthly",
@@ -441,8 +441,8 @@ export const copy = {
           icon: "video",
           caseStudy: {
             title: "90 UGC creatives a month for the price of 3 creator videos",
-            client: "DTC e-commerce brand, $30k/month Meta budget, 6 new products monthly",
-            problem: "Ad creatives took 3 weeks and $250–400 each to produce. Creative burnout was fast and testing variations was too expensive.",
+            client: "DTC e-commerce brand, €30k/month Meta budget, 6 new products monthly",
+            problem: "Ad creatives took 3 weeks and €250–400 each to produce. Creative burnout was fast and testing variations was too expensive.",
             solution: "AI video generator producing talking-to-camera demos and testimonials directly from listings and images.",
             results: [
               "Creative testing increased from 15 to 90 creatives per month",
