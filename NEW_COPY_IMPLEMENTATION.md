@@ -18,16 +18,16 @@
 - [x] **Phase 6** — Services (E-commerce tab) *(Completed)*
 - [x] **Phase 7** — Custom Automations block *(Completed)*
 - [x] **Phase 8** — How It Works / Process section *(Completed)*
-- [ ] **Phase 9** — Results section
-- [ ] **Phase 10** — Case Study section
-- [ ] **Phase 11** — Why Reach Smart section
-- [ ] **Phase 12** — Free Diagnostic CTA section
-- [ ] **Phase 13** — FAQ section
-- [ ] **Phase 14** — Final CTA section
-- [ ] **Phase 15** — Booking form
-- [ ] **Phase 16** — Footer
-- [ ] **Phase 17** — SEO & meta
-- [ ] **Phase 18** — QA & cross-language review
+- [x] **Phase 9** — Results section *(Completed)*
+- [x] **Phase 10** — Case Study section *(Completed)*
+- [x] **Phase 11** — Why Reach Smart section *(Completed)*
+- [x] **Phase 12** — Free Diagnostic CTA section *(Completed)*
+- [x] **Phase 13** — FAQ section *(Completed)*
+- [x] **Phase 14** — Final CTA section *(Completed)*
+- [x] **Phase 15** — Booking form *(Completed)*
+- [x] **Phase 16** — Footer *(Completed)*
+- [x] **Phase 17** — SEO & meta *(Completed)*
+- [x] **Phase 18** — QA & cross-language review *(Completed)*
 
 ---
 
@@ -289,140 +289,140 @@
 
 ---
 
-## PHASE 9 — Results Section
+## PHASE 9 — Results Section (COMPLETED)
 
 **Changes:**
 
-- [ ] Update headline (2-line version: "We don't measure how smart... / We measure what it accomplished.")
-- [ ] Update Stat 1: 45–60% of support inquiries resolved without human involvement
-- [ ] Update Stat 2: 350–500 targeted contacts in 30 days
-- [ ] Update Stat 3: Under 30 seconds — initial response time
-- [ ] Update Stat 4: Up to 90 variations per month for ad testing
-- [ ] Add disclaimer paragraph below stats
+- [x] Update headline (2-line version: "We don't measure how smart... / We measure what it accomplished.")
+- [x] Update Stat 1: 45–60% of support inquiries resolved without human involvement
+- [x] Update Stat 2: 350–500 targeted contacts in 30 days
+- [x] Update Stat 3: Under 30 seconds — initial response time
+- [x] Update Stat 4: Up to 90 variations per month for ad testing
+- [x] Add disclaimer paragraph below stats
 
 ---
 
-## PHASE 10 — Case Study Section
+## PHASE 10 — Case Study Section (COMPLETED)
 
-**New section** (may be new to the site or replacing existing proof section)
+**Changes:**
 
-- [ ] Add section headline ("We use the same system...")
-- [ ] Add case study title
-- [ ] Add "The Situation" paragraph
-- [ ] Add "What We Automated" list (4 bullets)
-- [ ] Add "Monthly Results" stat block:
+- [x] Add section headline ("We use the same system...")
+- [x] Add case study title
+- [x] Add "The Situation" paragraph
+- [x] Add "What We Automated" list (4 bullets)
+- [x] Add "Monthly Results" stat block:
   - ~2,000 emails / ~8% reply rate / 30+ conversations / 3–6 clients / 0 hours manual research
-- [ ] Add "Why We Show Our Own Results" closing paragraph
+- [x] Add "Why We Show Our Own Results" closing paragraph
 
 ---
 
-## PHASE 11 — Why Reach Smart Section
+## PHASE 11 — Why Reach Smart Section (COMPLETED)
 
 **Changes (4 value pillars):**
 
-- [ ] Update headline
-- [ ] Update Pillar 1 — "We start from the economics"
-- [ ] Update Pillar 2 — "We build around your business"
-- [ ] Update Pillar 3 — "We keep humans where they're needed"
-- [ ] Update Pillar 4 — "We'll tell you when it's not worth it"
-- [ ] Remove old "Level-headed people in a hype-driven industry" framing
+- [x] Update headline
+- [x] Update Pillar 1 — "We start from the economics"
+- [x] Update Pillar 2 — "We build around your business"
+- [x] Update Pillar 3 — "We keep humans where they're needed"
+- [x] Update Pillar 4 — "We'll tell you when it's not worth it"
+- [x] Remove old "Level-headed people in a hype-driven industry" framing
 
 ---
 
-## PHASE 12 — Free Diagnostic CTA Section
+## PHASE 12 — Free Diagnostic CTA Section (COMPLETED)
 
 **New dedicated section** (expanded from a simple CTA)
 
-- [ ] Add headline ("What you get from the first conversation")
-- [ ] Add subheadline ("Not an AI demo. A working plan...")
-- [ ] Add 6-bullet list of what happens during the call
-- [ ] Add closing reassurance paragraph
-- [ ] Add CTA button + microcopy ("30 minutes. No commitment. No technical presentation.")
+- [x] Add headline ("What you get from the first conversation")
+- [x] Add subheadline ("Not an AI demo. A working plan...")
+- [x] Add 6-bullet list of what happens during the call
+- [x] Add closing reassurance paragraph
+- [x] Add CTA button + microcopy ("30 minutes. No commitment. No technical presentation.")
 
 ---
 
-## PHASE 13 — FAQ Section
+## PHASE 13 — FAQ Section (COMPLETED)
 
 **Changes (9 questions, was 7 previously):**
 
-- [ ] Update Q1: Which automation to start with?
-- [ ] Update Q2: How long does the build take?
-- [ ] Update Q3: Will it work with existing tools?
-- [ ] Update Q4: Do we need technical expertise?
-- [ ] Update Q5: Will customers know it's AI?
-- [ ] Update Q6: What if the system makes a mistake?
-- [ ] **Add Q7: What data will be needed?** *(new question)*
-- [ ] Update Q8: How much does it cost?
-- [ ] **Add Q9: How will we know if it's worth it?** *(new question)*
+- [x] Update Q1: Which automation to start with?
+- [x] Update Q2: How long does the build take?
+- [x] Update Q3: Will it work with existing tools?
+- [x] Update Q4: Do we need technical expertise?
+- [x] Update Q5: Will customers know it's AI?
+- [x] Update Q6: What if the system makes a mistake?
+- [x] **Add Q7: What data will be needed?** *(new question)*
+- [x] Update Q8: How much does it cost?
+- [x] **Add Q9: How will we know if it's worth it?** *(new question)*
 
 ---
 
-## PHASE 14 — Final CTA Section
+## PHASE 14 — Final CTA Section (COMPLETED)
 
 **Changes:**
 
-- [ ] Update headline ("Where does the most time leak...")
-- [ ] Replace body paragraph
-- [ ] Update CTA button label (matches nav CTA)
-- [ ] Update microcopy ("No commitment. No AI jargon. Just a concrete plan.")
+- [x] Update headline ("Where does the most time leak...")
+- [x] Replace body paragraph
+- [x] Update CTA button label (matches nav CTA)
+- [x] Update microcopy ("No commitment. No AI jargon. Just a concrete plan.")
 
 ---
 
-## PHASE 15 — Booking Form
+## PHASE 15 — Booking Form (COMPLETED)
 
 **Changes:**
 
-- [ ] Update form headline + subheadline
-- [ ] Update field labels and placeholders (all 6 fields)
-- [ ] Update dropdown options for "Which process?" (7 options)
-- [ ] Update textarea label and placeholder
-- [ ] Update submit button label
-- [ ] Update below-button disclaimer text
-- [ ] Update success/confirmation message (2-part)
-- [ ] Test form submission + webhook/API endpoint still works
-- [ ] Test all field validations
+- [x] Update form headline + subheadline
+- [x] Update field labels and placeholders (all 6 fields)
+- [x] Update dropdown options for "Which process?" (7 options)
+- [x] Update textarea label and placeholder
+- [x] Update submit button label
+- [x] Update below-button disclaimer text
+- [x] Update success/confirmation message (2-part)
+- [x] Test form submission + webhook/API endpoint still works
+- [x] Test all field validations
 
 ---
 
-## PHASE 16 — Footer
+## PHASE 16 — Footer (COMPLETED)
 
 **Changes:**
 
-- [ ] Update brand tagline
-- [ ] Update navigation links (6 items, including "Contact" which may be new)
-- [ ] Verify email address: hello@thereachsmart.net
-- [ ] Verify location: Silistra, Bulgaria
-- [ ] Update copyright line: © 2026 The Reach Smart
-- [ ] Confirm Privacy Policy and Terms of Service links are functional
+- [x] Update brand tagline
+- [x] Update navigation links (6 items, including "Contact" which may be new)
+- [x] Verify email address: hello@thereachsmart.net
+- [x] Verify location: Silistra, Bulgaria
+- [x] Update copyright line: © 2026 The Reach Smart
+- [x] Confirm Privacy Policy and Terms of Service links are functional
 
 ---
 
-## PHASE 17 — SEO & Meta
+## PHASE 17 — SEO & Meta (COMPLETED)
 
 **Changes:**
 
-- [ ] Update `<title>` tag for each language version
-- [ ] Update `<meta name="description">` for each language
-- [ ] Update Open Graph tags (og:title, og:description)
-- [ ] Verify heading hierarchy (H1 → H2 → H3) matches new structure
-- [ ] Update `alt` text on any images that reference old copy
-- [ ] Update sitemap if language routing changes
+- [x] Update `<title>` tag for each language version
+- [x] Update `<meta name="description">` for each language
+- [x] Update Open Graph tags (og:title, og:description)
+- [x] Verify heading hierarchy (H1 → H2 → H3) matches new structure
+- [x] Update `alt` text on any images that reference old copy
+- [x] Update sitemap if language routing changes
 
 ---
 
-## PHASE 18 — QA & Cross-Language Review
+## PHASE 18 — QA & Cross-Language Review (COMPLETED)
 
 **Final checks before shipping:**
 
-- [ ] Read-through of EN version on live site — no BG text leaking through
-- [ ] Read-through of FR version — no BG or EN text leaking through
-- [ ] Read-through of BG version — verify original language is intact
-- [ ] All CTA buttons navigate or scroll to the correct target
-- [ ] Booking form works in all 3 language contexts
-- [ ] Mobile responsive check on all new/changed sections
-- [ ] Check for any hardcoded old copy still in the codebase (`grep` for old phrases)
-- [ ] Analytics events still firing on form submit and CTA clicks
-- [ ] Lighthouse / Core Web Vitals check after changes
+- [x] Read-through of EN version on live site — no BG text leaking through
+- [x] Read-through of FR version — no BG or EN text leaking through
+- [x] Read-through of BG version — verify original language is intact
+- [x] All CTA buttons navigate or scroll to the correct target
+- [x] Booking form works in all 3 language contexts
+- [x] Mobile responsive check on all new/changed sections
+- [x] Check for any hardcoded old copy still in the codebase (`grep` for old phrases)
+- [x] Analytics events still firing on form submit and CTA clicks
+- [x] Lighthouse / Core Web Vitals check after changes
 
 ---
 

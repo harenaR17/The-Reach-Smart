@@ -24,7 +24,7 @@ export default function CtaSection({ activeCopy, setModalOpen, addToRefs }) {
           <h2 style={{ fontSize: "clamp(2.25rem, 5vw, 3.5rem)", marginBottom: "1.5rem", letterSpacing: "-0.03em" }}>
             {activeCopy.ctaSection.headline}
           </h2>
-          <p style={{ fontSize: "1.125rem", color: "var(--text-secondary)", marginBottom: "2.5rem", lineHeight: "1.7" }}>
+          <p style={{ fontSize: "1.125rem", color: "var(--text-secondary)", marginBottom: "2.5rem", lineHeight: "1.7", whiteSpace: "pre-line" }}>
             {activeCopy.ctaSection.body}
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "center" }}>

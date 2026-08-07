@@ -12,6 +12,7 @@ import ServicesSection from "../components/ServicesSection";
 import HowItWorksSection from "../components/HowItWorksSection";
 import ProofSection from "../components/ProofSection";
 import WhyUsSection from "../components/WhyUsSection";
+import DiagnosticSection from "../components/DiagnosticSection";
 import FaqSection from "../components/FaqSection";
 import CtaSection from "../components/CtaSection";
 import ContactFormModal from "../components/ContactFormModal";
@@ -167,6 +168,11 @@ export default function Home() {
             activeCopy={activeCopy}
             addToRefs={addToRefs}
             lang={lang}
+          />
+          <DiagnosticSection
+            activeCopy={activeCopy}
+            setModalOpen={setModalOpen}
+            addToRefs={addToRefs}
           />
           <FaqSection
             activeCopy={activeCopy}

@@ -11,24 +11,24 @@ export default function FooterSection({ activeCopy, setModalOpen, lang }) {
             <a href="#" style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1rem" }} className="focus-ring">
               <Image
                 src="/logo.png"
-                alt="Reach Smart Logo"
+                alt="The Reach Smart Logo"
                 width={32}
                 height={32}
                 style={{ borderRadius: "50%" }}
               />
-              <span style={{ fontSize: "1.125rem", fontWeight: "900", fontFamily: "var(--font-space-grotesk)", tracking: "-0.03em" }}>
-                REACH<span style={{ color: "var(--brand-primary)" }}>SMART</span>
+              <span style={{ fontSize: "1.125rem", fontWeight: "900", fontFamily: "var(--font-space-grotesk)", letterSpacing: "-0.03em" }}>
+                THE REACH<span style={{ color: "var(--brand-primary)" }}>SMART</span>
               </span>
             </a>
-            <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
+            <p style={{ fontSize: "0.875rem", color: "var(--text-secondary)", lineHeight: "1.6" }}>
               {activeCopy.footer.tagline}
             </p>
           </div>
 
           <div style={{ display: "flex", gap: "4rem", flexWrap: "wrap" }} className="footer-links-group">
             <div>
-              <h4 style={{ fontSize: "0.875rem", textTransform: "uppercase", tracking: "0.05em", marginBottom: "1rem" }}>
-                {lang === "bg" ? "Навигация" : "Navigation"}
+              <h4 style={{ fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>
+                {lang === "bg" ? "Навигация" : lang === "fr" ? "Navigation" : "Navigation"}
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", fontSize: "0.875rem" }}>
                 <a href="#services" className="focus-ring" style={{ color: "var(--text-secondary)" }}>{activeCopy.nav.services}</a>
@@ -40,15 +40,15 @@ export default function FooterSection({ activeCopy, setModalOpen, lang }) {
             </div>
 
             <div>
-              <h4 style={{ fontSize: "0.875rem", textTransform: "uppercase", tracking: "0.05em", marginBottom: "1rem" }}>
-                {lang === "bg" ? "Контакт" : "Contact"}
+              <h4 style={{ fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "1rem" }}>
+                {lang === "bg" ? "Контакт" : lang === "fr" ? "Contact" : "Contact"}
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                <button onClick={() => setModalOpen(true)} className="focus-ring" style={{ textAlign: "left", color: "var(--brand-primary)", fontWeight: "600" }}>
+                <button onClick={() => setModalOpen(true)} className="focus-ring" style={{ textAlign: "left", color: "var(--brand-primary)", fontWeight: "600", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
                   {activeCopy.nav.cta}
                 </button>
-                <p>Sofia, Bulgaria</p>
-                <p>hello@reachsmart.ai</p>
+                <p>Silistra, Bulgaria</p>
+                <a href="mailto:hello@thereachsmart.net" style={{ color: "var(--text-secondary)" }}>hello@thereachsmart.net</a>
               </div>
             </div>
           </div>
@@ -59,8 +59,8 @@ export default function FooterSection({ activeCopy, setModalOpen, lang }) {
             {activeCopy.footer.copyright}
           </p>
           <div style={{ display: "flex", gap: "1.5rem", fontSize: "0.75rem", color: "var(--text-tertiary)" }}>
-            <a href="#" className="focus-ring">Privacy Policy</a>
-            <a href="#" className="focus-ring">Terms of Service</a>
+            <a href="#" className="focus-ring" style={{ color: "var(--text-tertiary)" }}>Privacy Policy</a>
+            <a href="#" className="focus-ring" style={{ color: "var(--text-tertiary)" }}>Terms of Service</a>
           </div>
         </div>
       </div>

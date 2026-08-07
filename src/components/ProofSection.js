@@ -49,9 +49,14 @@ export default function ProofSection({ activeCopy, addToRefs, lang }) {
           <div className="card-raised featured-case-card reveal" ref={addToRefs} style={{ marginBottom: "4rem" }}>
             <div className="featured-case-grid">
               <div className="featured-case-info">
-                <span className="eyebrow" style={{ display: "inline-block", textAlign: "left", margin: "0 0 0.75rem 0" }}>
-                  {lang === "bg" ? "Ядем собствената си храна" : lang === "fr" ? "Nous utilisons notre propre système" : "Eating Our Own Cooking"}
+                <span className="eyebrow" style={{ display: "inline-block", textAlign: "left", margin: "0 0 0.25rem 0" }}>
+                  {activeCopy.proof.featuredCase.eyebrow || (lang === "bg" ? "КАЗУС" : lang === "fr" ? "ÉTUDE DE CAS" : "CASE STUDY")}
                 </span>
+                {activeCopy.proof.featuredCase.subheadline && (
+                  <p style={{ fontSize: "0.875rem", color: "var(--brand-primary)", fontWeight: "600", marginBottom: "0.75rem" }}>
+                    {activeCopy.proof.featuredCase.subheadline}
+                  </p>
+                )}
                 <h3 style={{ fontSize: "1.6rem", marginBottom: "1rem", fontFamily: "var(--font-space-grotesk)", lineHeight: "1.25", color: "var(--text-primary)" }}>
                   {activeCopy.proof.featuredCase.title}
                 </h3>

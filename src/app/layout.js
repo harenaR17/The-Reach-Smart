@@ -19,8 +19,26 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata = {
-  title: "Reach Smart — AI Автоматизации за SaaS & E-commerce",
-  description: "AI автоматизации за SaaS и e-commerce: support агенти, lead generation системи, UGC генератор и post-purchase flows.",
+  title: "The Reach Smart — AI Автоматизации за SaaS & E-commerce | AI Automations",
+  description: "Reach Smart изгражда AI системи за SaaS и e-commerce: поддръжка на клиенти, lead generation, персонализиран outreach, UGC рекламно съдържание и комуникация след покупка.",
+  keywords: ["AI automations", "SaaS automation", "E-commerce AI support", "Lead generation AI", "Reach Smart", "Outreach automation"],
+  metadataBase: new URL("https://thereachsmart.net"),
+  openGraph: {
+    title: "The Reach Smart — AI Automations for SaaS & E-commerce",
+    description: "AI systems that take over customer support, lead discovery, personalized outreach, UGC ad variations, and post-purchase communication.",
+    url: "https://thereachsmart.net",
+    siteName: "The Reach Smart",
+    images: [
+      {
+        url: "/logo.png",
+        width: 512,
+        height: 512,
+        alt: "The Reach Smart Logo",
+      },
+    ],
+    locale: "bg_BG",
+    type: "website",
+  },
   icons: {
     icon: [
       { url: "/logo.png", type: "image/png" },
@@ -37,4 +55,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
