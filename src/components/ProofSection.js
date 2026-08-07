@@ -8,7 +8,9 @@ export default function ProofSection({ activeCopy, addToRefs, lang }) {
       <div className="container">
         <div className="section-header reveal" ref={addToRefs}>
           <span className="eyebrow">{activeCopy.proof.eyebrow}</span>
-          <h2 className="section-h2">{activeCopy.proof.headline}</h2>
+          <h2 className="section-h2" style={{ whiteSpace: "pre-line" }}>
+            {activeCopy.proof.headline}
+          </h2>
         </div>
 
         <div className="stats-grid">
@@ -16,10 +18,31 @@ export default function ProofSection({ activeCopy, addToRefs, lang }) {
             <div key={i} className={`card-raised stat-card reveal rd${i + 1}`} ref={addToRefs}>
               <div className="stat-value gradient-text">{stat.val}</div>
               <div className="stat-label-bold">{stat.desc}</div>
-              <p className="stat-label">{stat.label}</p>
+              {stat.label && <p className="stat-label">{stat.label}</p>}
             </div>
           ))}
         </div>
+
+        {activeCopy.proof.disclaimer && (
+          <p
+            className="stat-disclaimer reveal"
+            ref={addToRefs}
+            style={{
+              textAlign: "center",
+              fontSize: "0.875rem",
+              color: "var(--text-tertiary)",
+              marginTop: "2rem",
+              marginBottom: activeCopy.proof.featuredCase ? "3.5rem" : "0",
+              fontStyle: "italic",
+              maxWidth: "760px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              lineHeight: "1.6"
+            }}
+          >
+            {activeCopy.proof.disclaimer}
+          </p>
+        )}
 
         {/* Featured Case Study 7: Our Own System */}
         {activeCopy.proof.featuredCase && (
@@ -27,22 +50,22 @@ export default function ProofSection({ activeCopy, addToRefs, lang }) {
             <div className="featured-case-grid">
               <div className="featured-case-info">
                 <span className="eyebrow" style={{ display: "inline-block", textAlign: "left", margin: "0 0 0.75rem 0" }}>
-                  {lang === "bg" ? "Ядем собствената си храна" : "Eating Our Own Cooking"}
+                  {lang === "bg" ? "Ядем собствената си храна" : lang === "fr" ? "Nous utilisons notre propre système" : "Eating Our Own Cooking"}
                 </span>
                 <h3 style={{ fontSize: "1.6rem", marginBottom: "1rem", fontFamily: "var(--font-space-grotesk)", lineHeight: "1.25", color: "var(--text-primary)" }}>
                   {activeCopy.proof.featuredCase.title}
                 </h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.875rem", marginTop: "1.25rem", textAlign: "left" }}>
                   <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-                    <strong style={{ color: "var(--text-primary)" }}>{lang === "bg" ? "Профил: " : "Profile: "}</strong>
+                    <strong style={{ color: "var(--text-primary)" }}>{lang === "bg" ? "Профил: " : lang === "fr" ? "Profil : " : "Profile: "}</strong>
                     {activeCopy.proof.featuredCase.client}
                   </p>
                   <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-                    <strong style={{ color: "var(--text-primary)" }}>{lang === "bg" ? "Предизвикателството: " : "Challenge: "}</strong>
+                    <strong style={{ color: "var(--text-primary)" }}>{lang === "bg" ? "Предизвикателството: " : lang === "fr" ? "La situation : " : "Challenge: "}</strong>
                     {activeCopy.proof.featuredCase.problem}
                   </p>
                   <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.5" }}>
-                    <strong style={{ color: "var(--text-primary)" }}>{lang === "bg" ? "Решението: " : "Solution: "}</strong>
+                    <strong style={{ color: "var(--text-primary)" }}>{lang === "bg" ? "Решението: " : lang === "fr" ? "Ce que nous avons automatisé : " : "Solution: "}</strong>
                     {activeCopy.proof.featuredCase.solution}
                   </p>
                 </div>
@@ -50,7 +73,7 @@ export default function ProofSection({ activeCopy, addToRefs, lang }) {
               <div className="featured-case-results" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 <div>
                   <h4 style={{ fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--brand-primary)", marginBottom: "0.875rem" }}>
-                    {lang === "bg" ? "Резултати" : "Outcomes"}
+                    {lang === "bg" ? "Резултати" : lang === "fr" ? "Résultats mensuels" : "Outcomes"}
                   </h4>
                   <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.6rem" }}>
                     {activeCopy.proof.featuredCase.results.map((res, i) => (

@@ -161,47 +161,17 @@ export const copy = {
       ecom: [
         {
           title: "AI Customer Support",
-          hook: "Отговаряйте веднага, дори когато екипът ви не    howItWorks: {
-      eyebrow: "ПРОЦЕСЪТ",
-      headline: "От първия разговор до работеща система",
-      subheadline: "Ние изграждаме и настройваме. Вие не променяте целия си бизнес, за да се нагоди към автоматизацията.",
-      steps: [
-        {
-          num: "01",
-          title: "Диагностика",
-          desc: "В рамките на 30 минути разглеждаме процесите, които ви струват най-много време или пропуснати приходи. Не започваме с продажба на предварително избран продукт. Първо проверяваме има ли икономически смисъл от автоматизация. Накрая получавате ясна препоръка откъде да започнете.",
-        },
-        {
-          num: "02",
-          title: "Проектиране и изграждане",
-          desc: "Описваме как трябва да работи системата, какви данни са ѝ необходими и къде трябва да се включи човек. След това я свързваме с вашия help desk, CRM, магазин, база знания или друг използван инструмент.",
-        },
-        {
-          num: "03",
-          title: "Тестване и пускане",
-          desc: "Преди реалното внедряване тестваме нормални, гранични и проблемни ситуации. След старта наблюдаваме как системата се справя с реални клиенти, разговори и данни.",
-        },
-        {
-          num: "04",
-          title: "Оптимизация",
-          desc: "Преглеждаме резултатите и донастройваме логиката, съобщенията и правилата за прехвърляне към човек. Целта не е системата просто да бъде „активна“. Целта е да произвежда измерим резултат.",
-        },
-        {
-          num: "05",
-          title: "Измерване",
-          desc: "Следите показателите, които имат значение за конкретната автоматизация:",
+          hook: "Отговаряйте веднага, дори когато екипът ви не е на линия.",
+          desc: "AI агентът обработва повтарящите се въпроси преди и след покупката. Системата може да работи с вашия продуктов каталог, правила на магазина, информация за доставка и налични данни за поръчки.",
+          listHeader: "AI агентът обработва повтарящите се въпроси преди и след покупката:",
           bullets: [
-            "решени запитвания",
-            "спестено време",
-            "намерени контакти",
-            "получени отговори",
-            "записани разговори",
-            "създадени криейтиви",
-            "повторни покупки"
+            "Къде е моята поръчка?",
+            "Какъв размер да избера?",
+            "Как мога да върна продукт?",
+            "Кога ще бъде доставена поръчката ми?",
+            "Как да използвам продукта?"
           ],
-        },
-      ],
-    },�ва решение от човек, разговорът се прехвърля към екипа ви.",
+          subdesc: "Ако въпросът изисква решение от човек, разговорът се прехвърля към екипа ви.",
           result: "По-бързи отговори за клиентите и по-малко повтарящи се запитвания за екипа.",
           btnText: "Виж как работи",
           icon: "chat",
@@ -332,17 +302,18 @@ export const copy = {
       ],
       quote: "„Автоматизацията на чата съкрати времето ни за реакция от часове до секунди. Повечето рутинни въпроси се решават без намеса, а екипът ни се фокусира върху затварянето на сделки.“ (Георги Димитров, Основател на e-commerce бранд)",
       featuredCase: {
-        title: "Как напълнихме собствения си pipeline с 30+ разговора месечно, ползвайки системата ни за outreach",
-        client: "Ние. Reach Smart (AI автоматизации за бизнеса).",
-        problem: "Нов бранд, нов пазар, нула входящи запитвания. Трябваха ни клиенти за казуси и казуси за привличане на клиенти.",
-        solution: "Пуснахме собствената си Lead Finder + Outreach система. Дефинирахме идеален профил и стартирахме автоматичен outreach.",
+        title: "Как Reach Smart достигна до над 30 квалифицирани разговора месечно",
+        client: "Нов бранд. Нов пазар. Без постоянен поток от входящи запитвания.",
+        problem: "За да създадем първите си клиентски отношения и практически казуси, имахме нужда от предвидим начин да достигаме до подходящи компании.",
+        solution: "Дефиниране на идеален клиентски профил, автоматизирано откриване на вземащи решения, персонализиран outreach и автоматичен follow-up.",
         results: [
-          "2000 изпратени имейла месечно с около 8% отговор",
-          "30+ проведени квалифицирани разговора всеки месец",
-          "3-6 нови клиенти, генерирани от outbound системата ни",
-          "0 часа изгубени в ръчно търсене на контакти (напълно автоматизирано)"
+          "Около 2000 изпратени имейла",
+          "Приблизително 8% отговори",
+          "Над 30 квалифицирани разговора",
+          "Между 3 и 6 нови клиенти",
+          "0 часа ръчно търсене на контакти"
         ],
-        whyShow: "Защо ти го показваме: Защото най-честният отговор на „а вие ползвате ли това, което продавате?\" е страница с числата. Ядем собствената си храна, и тя ни докара клиентите, чиито резултати четеш по-горе."
+        whyShow: "Защо показваме собствения си резултат: Защото най-добрият отговор на въпроса \u201eИзползвате ли това, което продавате?\u201c не е обещание. Това е работеща система и числата зад нея."
       }
     },
     whyUs: {
@@ -717,17 +688,18 @@ export const copy = {
       ],
       quote: "“Implementing the chat automation reduced our response times from hours to seconds. It handles all common questions, letting our team focus on closing sales.” (Sarah Jenkins, Founder of Mucci Strength)",
       featuredCase: {
-        title: "How we filled our own pipeline with 30+ conversations a month, using the system we sell",
-        client: "Us. Reach Smart (AI automations for business).",
-        problem: "New brand, new market, zero inbound. The classic dilemma: you need customers to get case studies, and case studies to get customers.",
-        solution: "We turned our own Lead Finder + Outreach system on ourselves, defining our ICP and automating outreach.",
+        title: "How Reach Smart reached 30+ qualified conversations per month",
+        client: "New brand. New market. No steady stream of inbound inquiries.",
+        problem: "To build our first client relationships and practical case studies, we needed a predictable way to reach the right companies.",
+        solution: "Ideal customer profile definition, automated decision-maker discovery, personalized outreach, and automatic follow-up.",
         results: [
-          "Around 2,000 emails sent monthly with an ~8% reply rate",
-          "30+ qualified conversations booked and held every month",
-          "3-6 new customers closed directly attributable to outbound",
-          "0 hours spent on manual prospecting (completely automated)"
+          "~2,000 emails sent",
+          "~8% reply rate",
+          "30+ qualified conversations",
+          "3\u20136 new clients",
+          "0 hours of manual contact research"
         ],
-        whyShow: "Why we're showing you this: Because the most honest answer to 'do you actually use what you sell?' is a page with the numbers on it. We eat our own cooking, and it brought in the customers whose results you just read."
+        whyShow: "Why we show our own results: Because the best answer to \"Do you use what you sell?\" isn't a promise. It's a working system and the numbers behind it."
       }
     },
     whyUs: {
@@ -976,6 +948,180 @@ export const copy = {
           icon: "refresh",
         },
       ],
+    },
+    howItWorks: {
+      eyebrow: "LE PROCESSUS",
+      headline: "Du premier appel à un système fonctionnel",
+      subheadline: "Nous construisons et configurons. Vous ne réorganisez pas toute votre activité pour vous adapter à l'automatisation.",
+      steps: [
+        {
+          num: "01",
+          title: "Diagnostic",
+          desc: "En 30 minutes, nous examinons les processus qui vous coûtent le plus de temps ou de revenus manqués. Nous ne commençons pas par vendre un produit pré-sélectionné. Nous vérifions d'abord s'il y a un sens économique à automatiser. À la fin, vous obtenez une recommandation claire sur par où commencer.",
+        },
+        {
+          num: "02",
+          title: "Conception et construction",
+          desc: "Nous décrivons comment le système doit fonctionner, quelles données il nécessite et où un humain doit intervenir. Nous le connectons ensuite à votre help desk, CRM, boutique, base de connaissances ou tout autre outil utilisé.",
+        },
+        {
+          num: "03",
+          title: "Tests et lancement",
+          desc: "Avant le déploiement réel, nous testons les situations normales, limites et problématiques. Après le lancement, nous observons comment le système gère de vrais clients, conversations et données.",
+        },
+        {
+          num: "04",
+          title: "Optimisation",
+          desc: "Nous examinons les résultats et affinons la logique, les messages et les règles de transfert vers un humain. L'objectif n'est pas que le système soit simplement « actif ». L'objectif est de produire un résultat mesurable.",
+        },
+        {
+          num: "05",
+          title: "Mesure",
+          desc: "Vous suivez les indicateurs qui comptent pour l'automatisation spécifique :",
+          bullets: [
+            "demandes résolues",
+            "temps économisé",
+            "contacts trouvés",
+            "réponses reçues",
+            "conversations planifiées",
+            "contenus créatifs produits",
+            "achats répétés",
+          ],
+        },
+      ],
+    },
+    proof: {
+      eyebrow: "RÉSULTATS",
+      headline: "Nous ne mesurons pas à quel point l'IA paraît « intelligente ».\nNous mesurons ce qu'elle a accompli.",
+      disclaimer: "Les résultats spécifiques dépendent du processus, de la qualité des données, des systèmes utilisés, du marché et du volume de travail. Lors du premier appel, nous déterminons ce qui est réaliste pour votre activité.",
+      stats: [
+        {
+          val: "45–60 %",
+          desc: "des demandes de support peuvent être résolues sans intervention humaine.",
+          label: "Support automatisé",
+        },
+        {
+          val: "350–500",
+          desc: "contacts ciblés peuvent être préparés pour l'équipe commerciale en 30 jours.",
+          label: "Prospects ciblés",
+        },
+        {
+          val: "Moins de 30s",
+          desc: "le délai de première réponse peut être réduit à avec une communication automatisée.",
+          label: "Vitesse de réponse",
+        },
+        {
+          val: "Jusqu'à 90",
+          desc: "variantes par mois peuvent être créées pour les tests publicitaires, contre un volume manuel significativement inférieur.",
+          label: "Variantes publicitaires",
+        },
+      ],
+      featuredCase: {
+        title: "Comment Reach Smart a atteint plus de 30 conversations qualifiées par mois",
+        client: "Nouvelle marque. Nouveau marché. Pas de flux constant de demandes entrantes.",
+        problem: "Pour construire nos premières relations clients et nos études de cas pratiques, nous avions besoin d'un moyen prévisible d'atteindre les bonnes entreprises.",
+        solution: "Définition du profil client idéal, prospection automatisée des décideurs, outreach personnalisé et suivi automatique.",
+        results: [
+          "~2 000 emails envoyés",
+          "~8 % de taux de réponse",
+          "30+ conversations qualifiées",
+          "3 à 6 nouveaux clients",
+          "0 heure de recherche manuelle de contacts",
+        ],
+        whyShow: "Pourquoi nous montrons nos propres résultats : Parce que la meilleure réponse à « Utilisez-vous ce que vous vendez ? » n'est pas une promesse. C'est un système fonctionnel et les chiffres derrière.",
+      },
+    },
+    whyUs: {
+      eyebrow: "Pourquoi Reach Smart",
+      headline: "Marketing thinking. Technical execution. Financial discipline.",
+      body: "Nous n'automatisons pas les processus pour les rendre modernes. Nous les automatisons quand il y a une raison.",
+      pillars: [
+        {
+          title: "Nous partons de l'économie",
+          desc: "Nous venons du marketing à la performance et comprenons que chaque lead, chaque visite et chaque client a un coût. C'est pourquoi nous cherchons où l'automatisation peut protéger un investissement déjà réalisé ou créer de la valeur supplémentaire.",
+        },
+        {
+          title: "Nous construisons autour de votre activité",
+          desc: "Nous ne vous demandons pas d'abandonner toute votre pile technologique pour un nouvel outil. Nous connectons le système à votre façon de travailler, et ne changeons que ce qui doit réellement être changé.",
+        },
+        {
+          title: "Nous gardons les humains là où ils sont nécessaires",
+          desc: "Toutes les décisions ne doivent pas être prises par l'IA. Nous définissons des limites claires, des conditions d'escalade et des cas où le système doit remettre le contrôle à un humain.",
+        },
+        {
+          title: "Nous vous dirons quand ça n'en vaut pas la peine",
+          desc: "Parfois un processus est trop rare, trop variable ou trop peu coûteux pour justifier l'automatisation. Dans ce cas, nous le dirons directement. Une automatisation coûteuse sans retour mesurable n'est qu'un jouet coûteux.",
+        },
+      ],
+    },
+    faq: {
+      eyebrow: "FAQ",
+      headline: "Questions auxquelles nous répondons directement",
+      items: [
+        {
+          q: "Par quelle automatisation commencer ?",
+          a: "Celle qui peut apporter le plus de valeur avec le moins de complexité inutile. Pour une entreprise SaaS, cela peut être le support client. Pour une autre, la prospection. Pour une marque e-commerce, la production de contenus ou la communication post-achat. Lors de l'appel de diagnostic, nous comparons les options et les classons selon leur potentiel d'impact.",
+        },
+        {
+          q: "Combien de temps prend la construction ?",
+          a: "Cela dépend du nombre d'intégrations, de la qualité des données disponibles et de la complexité des décisions que le système doit prendre. La plupart des automatisations sont en ligne dans les 3 semaines suivant le premier appel.",
+        },
+        {
+          q: "Est-ce compatible avec nos outils existants ?",
+          a: "C'est tout l'intérêt. Nous construisons autour de votre pile : votre help desk, votre boutique, votre CRM, tout ce que vous utilisez. Nous le cartographions ensemble lors de l'appel.",
+        },
+        {
+          q: "Avons-nous besoin d'expertise technique ?",
+          a: "Non. Nous construisons, configurons et maintenons tout. Vous obtenez les résultats et un rapport de ce qui a été fait.",
+        },
+        {
+          q: "Les clients sauront-ils qu'il s'agit d'IA ?",
+          a: "Pour les automatisations orientées client, certains le sauront, et c'est acceptable. Ce qui compte : le client reçoit une réponse instantanément au lieu d'attendre des heures. Pour les cas complexes, le système transfère toujours vers un humain.",
+        },
+        {
+          q: "Que se passe-t-il si le système fait une erreur ?",
+          a: "Les premières semaines, nous surveillons tout et affinons. Ensuite, vous recevez des résumés réguliers et conservez toujours le contrôle humain sur les cas важных.",
+        },
+        {
+          q: "Quelles données seront nécessaires ?",
+          a: "Cela dépend du processus. Lors de l'appel de diagnostic, nous identifions exactement quelles données sont nécessaires et comment les connecter au système.",
+        },
+        {
+          q: "Combien ça coûte ?",
+          a: "Cela dépend de ce que nous construisons, c'est exactement pourquoi le premier appel est gratuit. Vous repartez avec un prix et un périmètre clairs avant d'avoir dépensé un euro. Une chose est certaine : les processus que vous effectuez manuellement vous coûtent déjà plus cher.",
+        },
+        {
+          q: "Comment saurons-nous si ça en vaut la peine ?",
+          a: "Nous définissons des indicateurs de succès avant de commencer. Après le lancement, vous pouvez voir exactement ce que le système a résolu, économisé ou généré. Si les chiffres ne sont pas là, nous le dirons.",
+        },
+      ],
+    },
+    ctaSection: {
+      headline: "Où le plus de temps fuit-il dans votre équipe ?",
+      body: "Support, ventes, contenu, suivi — quelque part vous perdez plus que vous ne le réalisez. Réservez 30 minutes : nous examinerons vos processus et vous montrerons exactement lequel coûte le plus et par où commencer.",
+      btn: "Réserver un diagnostic gratuit",
+      microcopy: "Sans engagement. Sans jargon technique. Juste un plan concret.",
+    },
+    modal: {
+      headline: "Réserver un diagnostic gratuit",
+      subheadline: "Laissez vos coordonnées et nous vous recontacterons dans les 24 heures.",
+      nameLabel: "Votre nom",
+      emailLabel: "Adresse e-mail",
+      companyLabel: "Nom de l'entreprise",
+      messageLabel: "Quel processus souhaitez-vous automatiser en premier ?",
+      placeholderName: "Jean Dupont",
+      placeholderEmail: "jean@entreprise.com",
+      placeholderCompany: "Entreprise SAS",
+      placeholderMessage: "Je souhaite automatiser le support client...",
+      submit: "Envoyer la demande",
+      successTitle: "Merci !",
+      successDesc: "Votre demande a été soumise avec succès. Nous vous recontacterons très prochainement.",
+      error: "Quelque chose s'est mal passé. Veuillez réessayer ou nous contacter directement.",
+      loading: "Envoi en cours...",
+    },
+    footer: {
+      tagline: "Reach Smart : des automatisations IA pour le SaaS et l'e-commerce qui redonnent du temps à votre équipe.",
+      copyright: "© 2026 Reach Smart. Tous droits réservés.",
     },
   },
 };
