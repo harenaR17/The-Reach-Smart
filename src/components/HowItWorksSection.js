@@ -41,6 +41,26 @@ function TimelineStep({
         <div className="timeline-card">
           <h3 className="timeline-step-title">{step.title}</h3>
           <p className="timeline-step-desc">{step.desc}</p>
+          {step.bullets && step.bullets.length > 0 && (
+            <div style={{ marginTop: "0.75rem", display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
+              {step.bullets.map((b, i) => (
+                <span
+                  key={i}
+                  style={{
+                    fontSize: "0.8rem",
+                    padding: "0.25rem 0.6rem",
+                    background: "rgba(110, 58, 255, 0.1)",
+                    border: "1px solid rgba(110, 58, 255, 0.25)",
+                    borderRadius: "12px",
+                    color: "var(--brand-primary)",
+                    fontWeight: "500",
+                  }}
+                >
+                  ✓ {b}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -48,7 +68,7 @@ function TimelineStep({
 }
 
 export default function HowItWorksSection({ activeCopy }) {
-  const steps = activeCopy.howItWorks.steps;
+  const steps = activeCopy.howItWorks.steps || [];
   const trackRef = useRef(null);
   const nodeRefs = useRef([]);
   const positionsRef = useRef([]);
@@ -158,6 +178,11 @@ export default function HowItWorksSection({ activeCopy }) {
         <div className="section-header" style={{ marginBottom: "4rem" }}>
           <span className="eyebrow">{activeCopy.howItWorks.eyebrow}</span>
           <h2 className="section-h2">{activeCopy.howItWorks.headline}</h2>
+          {activeCopy.howItWorks.subheadline && (
+            <p className="body-lg" style={{ marginTop: "0.5rem", color: "var(--text-secondary)" }}>
+              {activeCopy.howItWorks.subheadline}
+            </p>
+          )}
         </div>
 
         <div className="timeline-track" ref={trackRef}>

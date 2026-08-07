@@ -37,7 +37,7 @@ export default function Home() {
   // Load language preference
   useEffect(() => {
     const savedLang = localStorage.getItem("reach-smart-lang");
-    if (savedLang && (savedLang === "bg" || savedLang === "en")) {
+    if (savedLang && (savedLang === "bg" || savedLang === "en" || savedLang === "fr")) {
       setLang(savedLang);
       document.documentElement.setAttribute("lang", savedLang);
     } else {
@@ -112,7 +112,7 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  const activeCopy = copy[lang];
+  const activeCopy = copy[lang] || copy.bg;
 
   return (
     <>

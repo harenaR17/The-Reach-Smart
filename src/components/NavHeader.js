@@ -53,6 +53,11 @@ export default function NavHeader({
                 className={`lang-btn focus-ring ${lang === "en" ? "active" : ""}`}
                 aria-label="English"
               >EN</button>
+              <button
+                onClick={() => handleLangChange("fr")}
+                className={`lang-btn focus-ring ${lang === "fr" ? "active" : ""}`}
+                aria-label="French"
+              >FR</button>
             </div>
 
             <button

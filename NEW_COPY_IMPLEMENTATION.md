@@ -10,14 +10,14 @@
 ## CHECKLIST OVERVIEW
 
 - [x] **Phase 0** — Pre-implementation audit *(Completed)*
-- [ ] **Phase 1** — Navigation & global UI elements
-- [ ] **Phase 2** — Hero section
-- [ ] **Phase 3** — Problem section
-- [ ] **Phase 4** — Solution section
-- [ ] **Phase 5** — Services (SaaS tab)
-- [ ] **Phase 6** — Services (E-commerce tab)
-- [ ] **Phase 7** — Custom Automations block
-- [ ] **Phase 8** — How It Works / Process section
+- [x] **Phase 1** — Navigation & global UI elements *(Completed)*
+- [x] **Phase 2** — Hero section *(Completed)*
+- [x] **Phase 3** — Problem section *(Completed)*
+- [x] **Phase 4** — Solution section *(Completed)*
+- [x] **Phase 5** — Services (SaaS tab) *(Completed)*
+- [x] **Phase 6** — Services (E-commerce tab) *(Completed)*
+- [x] **Phase 7** — Custom Automations block *(Completed)*
+- [x] **Phase 8** — How It Works / Process section *(Completed)*
 - [ ] **Phase 9** — Results section
 - [ ] **Phase 10** — Case Study section
 - [ ] **Phase 11** — Why Reach Smart section
@@ -28,6 +28,96 @@
 - [ ] **Phase 16** — Footer
 - [ ] **Phase 17** — SEO & meta
 - [ ] **Phase 18** — QA & cross-language review
+
+---
+
+## PHASE 8 — How It Works / Process Section (COMPLETED)
+
+**Files affected:** [src/app/copy.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/app/copy.js), [src/components/HowItWorksSection.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/components/HowItWorksSection.js)
+
+**Changes:**
+- [x] Updated headline & added subheadline ("We build and configure. You don't overhaul your entire business...")
+- [x] Updated 5 sequential timeline steps across BG, EN, and FR:
+  1. **Step 01 — Diagnostic:** 30-minute evaluation without selling pre-selected products
+  2. **Step 02 — Design & Build:** Mapping workflow, human handoffs, and tool integrations (CRM, help desk, store)
+  3. **Step 03 — Testing & Launch:** Edge-case testing before going live
+  4. **Step 04 — Optimization:** Fine-tuning logic for measurable business return
+  5. **Step 05 — Measurement:** Tracking metrics badges (resolved inquiries, time saved, contacts found, replies, booked calls, UGC creatives, repeat purchases)
+
+---
+
+## PHASE 7 — Custom Automations Block (COMPLETED)
+
+**Files affected:** [src/app/copy.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/app/copy.js), [src/components/ServicesSection.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/components/ServicesSection.js)
+
+**Changes:**
+- [x] Implemented new Custom Automations banner block ("Don't see your process in the list?") across BG, EN, and FR
+- [x] Added diagnostic assessment body text ("In the diagnostic call, we'll look at how the process works today...")
+- [x] Added 3 direct promise items (whether it can be automated, whether it's worth automating, what should stay under human control)
+- [x] Added CTA button ("Discuss your process" / "Обсъди своя процес" / "Discuter de votre processus") opening diagnostic call modal
+
+---
+
+## PHASE 6 — Services: E-commerce Tab (COMPLETED)
+
+**Files affected:** [src/app/copy.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/app/copy.js), [src/components/ServicesSection.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/components/ServicesSection.js)
+
+**Changes:**
+- [x] Replaced card copy for **AI Customer Support** (Hook: "Answer instantly, even when your team is offline", 5 question bullets: "Where is my order?", "What size to choose?", etc., result)
+- [x] Replaced card copy for **UGC Content Engine** (Hook: "More ad variations. Less waiting for the next creative", 5 input sources, result)
+- [x] Replaced card copy for **Post-Purchase Revenue Flow** (Hook: "The purchase shouldn't be the last message a customer gets from you", 6 flow items, result)
+- [x] Verified full 3-language rendering (BG, EN, FR) and action buttons triggering diagnostic call modal
+
+---
+
+## PHASE 5 — Services: SaaS Tab (COMPLETED)
+
+**Files affected:** [src/app/copy.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/app/copy.js), [src/components/ServicesSection.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/components/ServicesSection.js)
+
+**Changes:**
+- [x] Updated Services section header & subheadline across BG, EN, and FR
+- [x] Replaced card copy for **AI Chat Support Agent** (Hook: "Stop solving the same problem a hundred times", desc, result)
+- [x] Replaced card copy for **Lead Finder System** (Hook: "Let your salespeople sell — not organize lists", desc, list header & 4 bullet criteria, result)
+- [x] Replaced card copy for **Lead Finder + Outreach System** (Hook: "From an empty pipeline to replies in your inbox", desc, 5 tracking items, result)
+- [x] Implemented "See how it works" / "Виж как работи" action button on each card triggering diagnostic booking modal
+
+---
+
+## PHASE 4 — Solution Section (COMPLETED)
+
+**Files affected:** [src/app/copy.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/app/copy.js), [src/components/SolutionSection.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/components/SolutionSection.js)
+
+**Changes:**
+- [x] Replaced headline & subheadline ("Automation with a business reason" — "Every system must return time, revenue, or both")
+- [x] Implemented interactive diagnostic question cards ("Where does your team lose time?", "Where are prospects waiting too long?", etc.)
+- [x] Implemented outcome grid with 5 green checkmark result cards (fewer tickets, precise contacts, started conversations, ad variations, returning buyers)
+- [x] Stylistically distinguished section with purple-tinted card backgrounds and clear visual hierarchy
+
+---
+
+## PHASE 3 — Problem Section (COMPLETED)
+
+**Files affected:** [src/app/copy.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/app/copy.js), [src/components/ProblemSection.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/components/ProblemSection.js)
+
+**Changes:**
+- [x] Replaced headline ("Ръчната работа расте по-бързо от бизнеса ви." / "Manual work grows faster than your business." / "Le travail manuel croît plus vite que votre activité.")
+- [x] Replaced intro and structured the 4 core problem bullet statements (Support, Sales, Marketing, Follow-up) with red accent highlights
+- [x] Replaced options comparison block ("Add more people" vs "Remove non-human work")
+- [x] Replaced closing punchline card ("Проблемът не е в капацитета на екипа. Проблемът е къде отива този капацитет.")
+
+---
+
+## PHASE 2 — Hero Section (COMPLETED)
+
+**Files affected:** [src/app/copy.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/app/copy.js), [src/components/HeroSection.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/components/HeroSection.js)
+
+**Changes:**
+- [x] Replaced headline across all 3 languages (BG, EN, FR)
+- [x] Replaced subheadline and body paragraphs ("Reach Smart izgraжда AI системи...")
+- [x] Replaced CTA button label ("Запази безплатна диагностика" / "Book a Free Diagnostic" / "Réserver un diagnostic gratuit")
+- [x] Replaced microcopy under CTA button
+- [x] Implemented the 5 short highlight badges (AI Support, Lead Finder, Outreach, UGC Content, Post-Purchase) dynamically linked to copy dictionary and rendered both on orbit scene badges and in a responsive highlights strip below hero text
+- [x] Verified mobile layout of highlights strip
 
 ---
 
@@ -71,20 +161,21 @@
 
 ---
 
-## PHASE 1 — Navigation & Global UI Elements
+## PHASE 1 — Navigation & Global UI Elements (COMPLETED)
 
-**Files likely affected:** navbar component, layout file, i18n strings
+**Files affected:** [src/app/copy.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/app/copy.js), [src/components/NavHeader.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/components/NavHeader.js), [src/app/page.js](file:///c:/Users/haren/Documents/Antigravity%20coding/The%20Reach%20Smart/src/app/page.js)
 
 **Changes:**
-- [ ] Update nav menu items:
+- [x] Update nav menu items in BG, EN, and FR:
   - BG: Услуги · Как работим · Резултати · Защо Reach Smart · Въпроси
   - EN: Services · How We Work · Results · Why Reach Smart · Questions
   - FR: Services · Comment nous travaillons · Résultats · Pourquoi Reach Smart · Questions
-- [ ] Update main CTA button label:
+- [x] Update nav CTA button in BG, EN, and FR:
   - BG: Запази безплатна диагностика
   - EN: Book a Free Diagnostic
   - FR: Réserver un diagnostic gratuit
-- [ ] Verify anchor links match new section IDs
+- [x] Added French (`FR`) option to language switcher in `NavHeader.js` and updated state handler in `page.js`
+- [x] Verified anchor links (`#services`, `#process`, `#results`, `#why-us`, `#faq`) match section container IDs
 
 ---
 
