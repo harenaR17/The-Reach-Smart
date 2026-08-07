@@ -2,7 +2,6 @@
 import React from "react";
 import { ArrowRightIcon } from "@/app/icons";
 import OrbitScene from "./OrbitScene";
-import FloatBadge from "./FloatBadge";
 
 export default function HeroSection({ activeCopy, setModalOpen, lang }) {
   const highlights = activeCopy.hero.highlights || [];
@@ -108,52 +107,11 @@ export default function HeroSection({ activeCopy, setModalOpen, lang }) {
             </button>
             <p className="hero-microcopy">{activeCopy.hero.microcopy}</p>
           </div>
-
-          {/* Short highlights strip */}
-          {highlights.length > 0 && (
-            <div
-              className="hero-highlights-strip"
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "0.5rem 1rem",
-                marginTop: "1.5rem",
-                paddingTop: "1.25rem",
-                borderTop: "1px solid var(--border-default)",
-              }}
-            >
-              {highlights.map((h, i) => (
-                <div
-                  key={i}
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "0.4rem",
-                    fontSize: "0.85rem",
-                    color: "var(--text-secondary)",
-                    background: "rgba(255, 255, 255, 0.03)",
-                    padding: "0.3rem 0.6rem",
-                    borderRadius: "20px",
-                    border: "1px solid var(--border-default)",
-                  }}
-                >
-                  <span>{h.icon}</span>
-                  <strong style={{ color: "var(--text-primary)" }}>{h.label}</strong>
-                  <span>— {h.desc}</span>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
 
         {/* Right orbit scene */}
-        <div className="hero-mockup-wrapper">
-          <OrbitScene
-            badges={heroBadges.map((b, i) => (
-              <FloatBadge key={i} {...b} />
-            ))}
-            showGlow={true}
-          />
+        <div className="hero-mockup-wrapper" style={{ width: "100%" }}>
+          <OrbitScene />
         </div>
       </div>
     </section>

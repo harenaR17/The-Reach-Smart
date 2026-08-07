@@ -462,6 +462,17 @@ h1, h2, h3, h4, h5, h6 {
 .hero-mockup-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.hero-visual-img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 40px rgba(110, 58, 255, 0.25));
 }
 
 /* Interactive phone simulation */
@@ -1447,6 +1458,126 @@ h1, h2, h3, h4, h5, h6 {
   transform-style: preserve-3d;
   perspective: 800px;
 }
+
+/* Diagram styles from OrbitScene.md */
+.diagram {
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  aspect-ratio: 1 / 1;
+  container-type: inline-size;
+}
+
+.diagram .connectors {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.diagram .circle {
+  position: absolute;
+  left: 50%;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  width: 33cqw;
+  height: 33cqw;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(140deg, #3d5afe 0%, #6039e8 55%, #8b2ff0 100%);
+  box-shadow:
+    0 1.6cqw 2.8cqw rgba(63, 30, 130, 0.35),
+    inset 0 -1.4cqw 2cqw rgba(15, 5, 45, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: 1.5cqw;
+}
+
+.diagram .circle::before {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: 10%;
+  width: 50%;
+  height: 34%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.5), rgba(255,255,255,0) 72%);
+  border-radius: 50%;
+}
+
+.diagram .circle .label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.diagram .card {
+  position: absolute;
+  width: 32cqw;
+  background: linear-gradient(135deg, #8a7cba 0%, #4c3f80 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2cqw;
+  box-shadow: 0 1cqw 2.2cqw rgba(45, 20, 95, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 1.3cqw;
+  padding: 1.6cqw 1.7cqw;
+  z-index: 2;
+}
+
+.diagram .card .icon-tile {
+  flex: none;
+  width: 5.8cqw;
+  height: 5.8cqw;
+  border-radius: 1.5cqw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diagram .card .icon-tile svg { width: 55%; height: 55%; }
+
+.diagram .card .text { min-width: 0; flex: 1 1 auto; }
+
+.diagram .card .text h3 {
+  margin: 0 0 0.2em;
+  font-size: clamp(12px, 2.3cqw, 23px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.diagram .card .text p {
+  margin: 0;
+  font-size: clamp(8.5px, 1.3cqw, 13px);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.diagram .card.top { left: 50%; top: 12cqw; transform: translateX(-50%); }
+.diagram .card.left { left: 1.5cqw; top: 33cqw; }
+.diagram .card.right { right: 1.5cqw; top: 33cqw; }
+.diagram .card.bottom-left { left: 1.5cqw; top: 70.5cqw; }
+.diagram .card.bottom-right { right: 1.5cqw; top: 70.5cqw; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .diagram .card, .diagram .circle { animation: rsFade 0.6s ease backwards; }
+  .diagram .card.left, .diagram .card.right { animation-delay: 0.12s; }
+  .diagram .card.bottom-left, .diagram .card.bottom-right { animation-delay: 0.24s; }
+}
+@keyframes rsFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
 /* Shared layer style */
 .platform-layer {
