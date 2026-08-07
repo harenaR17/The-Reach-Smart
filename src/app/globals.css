@@ -107,9 +107,9 @@ button {
 /* Layout Utilities */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 .section-padding {
@@ -399,6 +399,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 70px;
   padding-bottom: 2rem;
 }
+
+
 
 .hero-glow {
   position: absolute;
@@ -1394,7 +1396,7 @@ h1, h2, h3, h4, h5, h6 {
 .orbit-scene {
   position: relative;
   width: 100%;
-  max-width: 460px;
+  max-width: 500px;
   aspect-ratio: 1 / 1;
   margin: 2rem auto 0 auto;
   display: flex;
@@ -1408,53 +1410,111 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
-  filter: blur(40px);
+  filter: blur(50px);
 }
 
-.orbit-ring {
+/* SVG connector lines */
+.orbit-connectors {
   position: absolute;
-  inset: 5%;
-  border-radius: 50%;
-  border: 1.5px dashed rgba(58, 91, 255, 0.25);
-  pointer-events: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
-  animation: spin 25s linear infinite;
+  pointer-events: none;
+  overflow: visible;
 }
 
-.orbit-dot {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--brand-primary);
-  box-shadow: 0 0 12px var(--brand-primary);
-  transform: translate(-50%, -50%);
+.orbit-connector-line {
+  stroke: rgba(110, 58, 255, 0.3);
+  stroke-width: 0.6;
+  stroke-dasharray: 3 3;
 }
 
+/* Center platform wrapper */
 .orbit-center {
   position: relative;
   z-index: 2;
-}
-
-.center-ai-orb {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background: var(--gradient-brand);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-space-grotesk), sans-serif;
-  font-weight: 700;
-  font-size: 1.85rem;
-  color: #ffffff;
-  box-shadow: 0 0 35px rgba(58, 91, 255, 0.5);
-  animation: pulse-glow 4s ease-in-out infinite;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* ---- Layered 3D Platform ---- */
+.layered-platform {
+  position: relative;
+  width: 200px;
+  height: 160px;
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+/* Shared layer style */
+.platform-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(110, 58, 255, 0.55) 0%, rgba(58, 91, 255, 0.4) 100%);
+  border: 1px solid rgba(180, 140, 255, 0.25);
+  box-shadow:
+    0 0 30px rgba(110, 58, 255, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transform: perspective(600px) rotateX(28deg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Bottom-most layer (widest, lowest) */
+.platform-layer-3 {
+  height: 60px;
+  top: 90px;
+  transform: perspective(600px) rotateX(28deg) scale(1.08);
+  background: linear-gradient(135deg, rgba(80, 40, 200, 0.45) 0%, rgba(40, 60, 180, 0.3) 100%);
+  opacity: 0.7;
+}
+
+/* Middle layer */
+.platform-layer-2 {
+  height: 60px;
+  top: 56px;
+  transform: perspective(600px) rotateX(28deg) scale(1.04);
+  background: linear-gradient(135deg, rgba(100, 55, 240, 0.5) 0%, rgba(55, 75, 220, 0.38) 100%);
+  opacity: 0.85;
+}
+
+/* Top-most layer (logo sits here) */
+.platform-layer-1 {
+  height: 60px;
+  top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(130, 70, 255, 0.6) 0%, rgba(70, 95, 255, 0.45) 100%);
+  box-shadow:
+    0 0 40px rgba(130, 70, 255, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  animation: platform-pulse 5s ease-in-out infinite;
+}
+
+/* Logo on top layer */
+.platform-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+}
+
+.platform-logo {
+  object-fit: contain;
+  object-position: center;
+  max-width: 100%;
+  max-height: 38px;
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(200, 180, 255, 0.6));
+}
+
+/* Badge container */
 .orbit-badges-container {
   position: absolute;
   inset: 0;
@@ -1462,66 +1522,94 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 3;
 }
 
+/* Float Badge — two-line layout */
 .float-badge {
   position: absolute;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
-  padding: 0.6rem 1rem;
+  padding: 0.65rem 0.9rem;
   border-radius: 14px;
-  background: rgba(14, 17, 48, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 12, 38, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   font-size: 0.8125rem;
-  font-weight: 500;
   color: var(--text-primary);
   white-space: nowrap;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-md), 0 0 20px rgba(110, 58, 255, 0.08);
   pointer-events: auto;
   animation: float 4s ease-in-out infinite;
+  min-width: 140px;
 }
 
 .float-badge-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
-  font-size: 0.875rem;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  font-size: 0.9rem;
   flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.float-badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
 .float-badge-label {
   font-family: var(--font-space-grotesk), sans-serif;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+  line-height: 1.2;
 }
 
-/* Positioning Utility Classes for Badges */
-.badge-top-left {
-  top: 10%;
-  left: -5%;
+.float-badge-desc {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  line-height: 1.3;
 }
 
-.badge-top-right {
-  top: 15%;
-  right: -8%;
+/* ---- Badge Position Utilities (5-point layout) ---- */
+/* Top-center — AI Support */
+.badge-top-center {
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* Left-center — Lead Finder */
+.badge-left-center {
+  top: 50%;
+  left: -2%;
+  transform: translateY(-50%) translateX(-100%);
+}
+
+/* Right-top — Outreach */
+.badge-right-top {
+  top: 20%;
+  right: -2%;
+  transform: translateX(100%);
+}
+
+/* Bottom-left — UGC Content */
 .badge-bottom-left {
-  bottom: 15%;
-  left: -10%;
+  bottom: 8%;
+  left: -2%;
+  transform: translateX(-100%);
 }
 
+/* Bottom-right — Post-Purchase */
 .badge-bottom-right {
-  bottom: 10%;
-  right: -5%;
-}
-
-.badge-mid-right {
-  top: 48%;
-  right: -12%;
+  bottom: 8%;
+  right: -2%;
+  transform: translateX(100%);
 }
 
 /* Featured Case Study 7 Styling */
@@ -1591,7 +1679,31 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
+  }
+}
+
+/* Overrides for badges with their own horizontal transform */
+.badge-left-center  { animation: float-left  4s ease-in-out infinite; }
+.badge-right-top    { animation: float-right 4s ease-in-out 0.5s infinite; }
+.badge-bottom-left  { animation: float-left  4s ease-in-out 0.3s infinite; }
+.badge-bottom-right { animation: float-right 4s ease-in-out 1s infinite; }
+
+@keyframes float-left {
+  0%, 100% { transform: translateY(0) translateX(-100%); }
+  50%       { transform: translateY(-7px) translateX(-100%); }
+}
+@keyframes float-right {
+  0%, 100% { transform: translateY(0) translateX(100%); }
+  50%       { transform: translateY(-7px) translateX(100%); }
+}
+
+@keyframes platform-pulse {
+  0%, 100% {
+    box-shadow: 0 0 40px rgba(130, 70, 255, 0.5), inset 0 1px 0 rgba(255,255,255,0.18);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(130, 70, 255, 0.75), inset 0 1px 0 rgba(255,255,255,0.25);
   }
 }
 
@@ -1607,24 +1719,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* Responsive Adjustments */
 @media (max-width: 992px) {
-  .badge-top-left { left: 0%; }
-  .badge-top-right { right: 0%; }
-  .badge-bottom-left { left: 0%; }
-  .badge-bottom-right { right: 0%; }
-  .badge-mid-right { right: -5%; }
+  .badge-top-center { left: 50%; transform: translateX(-50%); }
+  .badge-left-center { left: 0%; transform: translateX(-80%); }
+  .badge-right-top { right: 0%; transform: translateX(80%); }
+  .badge-bottom-left { left: 0%; transform: translateX(-80%); }
+  .badge-bottom-right { right: 0%; transform: translateX(80%); }
   .float-badge {
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 0.75rem;
     font-size: 0.75rem;
+    min-width: 120px;
   }
 }
 
@@ -1639,19 +1748,24 @@ h1, h2, h3, h4, h5, h6 {
   .case-study-modal-card {
     padding: 1.5rem;
   }
+  .layered-platform {
+    width: 160px;
+    height: 130px;
+  }
+  .platform-layer-3 { top: 72px; height: 50px; }
+  .platform-layer-2 { top: 44px; height: 50px; }
+  .platform-layer-1 { top: 16px; height: 50px; }
 }
 
 @media (max-width: 576px) {
   .float-badge {
-    display: none; /* Hide floating badges on mobile screen widths to keep it tidy */
+    display: none; /* Hide floating badges on very small screens */
+  }
+  .orbit-connectors {
+    display: none;
   }
   .orbit-scene {
     max-width: 280px;
     margin-top: 1rem;
-  }
-  .center-ai-orb {
-    width: 90px;
-    height: 90px;
-    font-size: 1.5rem;
   }
 }

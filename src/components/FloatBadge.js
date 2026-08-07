@@ -4,6 +4,7 @@ import React from "react";
 export default function FloatBadge({
   icon,
   label,
+  desc,
   iconBg = "rgba(255, 255, 255, 0.1)",
   iconColor = "#ffffff",
   delay = 0,
@@ -25,7 +26,10 @@ export default function FloatBadge({
       >
         {icon}
       </span>
-      <span className="float-badge-label">{label}</span>
+      <span className="float-badge-text">
+        <strong className="float-badge-label">{label}</strong>
+        {desc && <span className="float-badge-desc">{desc}</span>}
+      </span>
     </div>
   );
 }

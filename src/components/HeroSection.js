@@ -11,42 +11,47 @@ export default function HeroSection({ activeCopy, setModalOpen, lang }) {
     {
       icon: highlights[0]?.icon || "💬",
       label: highlights[0]?.label || "AI Support",
+      desc: highlights[0]?.desc,
       iconBg: "rgba(58, 91, 255, 0.2)",
       iconColor: "#3A5BFF",
       delay: 0,
-      className: "badge-top-left",
+      className: "badge-top-center",
     },
     {
       icon: highlights[1]?.icon || "🎯",
       label: highlights[1]?.label || "Lead Finder",
+      desc: highlights[1]?.desc,
       iconBg: "rgba(110, 58, 255, 0.2)",
       iconColor: "#6E3AFF",
       delay: 0.8,
-      className: "badge-top-right",
+      className: "badge-left-center",
     },
     {
       icon: highlights[2]?.icon || "✉",
       label: highlights[2]?.label || "Outreach",
+      desc: highlights[2]?.desc,
       iconBg: "rgba(160, 164, 192, 0.2)",
       iconColor: "#A0A4C0",
       delay: 1.6,
-      className: "badge-bottom-left",
+      className: "badge-right-top",
     },
     {
       icon: highlights[3]?.icon || "🎥",
       label: highlights[3]?.label || "UGC Content",
+      desc: highlights[3]?.desc,
       iconBg: "rgba(239, 68, 68, 0.2)",
       iconColor: "#EF4444",
       delay: 0.4,
-      className: "badge-bottom-right",
+      className: "badge-bottom-left",
     },
     {
       icon: highlights[4]?.icon || "🔄",
       label: highlights[4]?.label || "Post-Purchase",
+      desc: highlights[4]?.desc,
       iconBg: "rgba(16, 185, 129, 0.2)",
       iconColor: "#10B981",
       delay: 1.2,
-      className: "badge-mid-right",
+      className: "badge-bottom-right",
     },
   ];
 
@@ -147,11 +152,8 @@ export default function HeroSection({ activeCopy, setModalOpen, lang }) {
             badges={heroBadges.map((b, i) => (
               <FloatBadge key={i} {...b} />
             ))}
-            showRing={true}
             showGlow={true}
-          >
-            <div className="center-ai-orb">AI</div>
-          </OrbitScene>
+          />
         </div>
       </div>
     </section>

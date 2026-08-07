@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function FooterSection({ activeCopy, setModalOpen, lang }) {
+export default function FooterSection({ activeCopy, setModalOpen, setPrivacyModalOpen, lang }) {
   return (
     <footer style={{ borderTop: "1px solid var(--border-subtle)", padding: "4rem 0 2.5rem 0", backgroundColor: "#040612" }}>
       <div className="container">
@@ -59,8 +59,14 @@ export default function FooterSection({ activeCopy, setModalOpen, lang }) {
             {activeCopy.footer.copyright}
           </p>
           <div style={{ display: "flex", gap: "1.5rem", fontSize: "0.75rem", color: "var(--text-tertiary)" }}>
-            <a href="#" className="focus-ring" style={{ color: "var(--text-tertiary)" }}>Privacy Policy</a>
-            <a href="#" className="focus-ring" style={{ color: "var(--text-tertiary)" }}>Terms of Service</a>
+            <button
+              type="button"
+              onClick={() => setPrivacyModalOpen(true)}
+              className="focus-ring"
+              style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--text-tertiary)", fontSize: "0.75rem" }}
+            >
+              {activeCopy.footer.privacyPolicyLink || "Privacy Policy"}
+            </button>
           </div>
         </div>
       </div>

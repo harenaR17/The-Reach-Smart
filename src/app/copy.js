@@ -438,6 +438,159 @@ export const copy = {
     footer: {
       tagline: "AI автоматизации за SaaS и e-commerce бизнеси, които освобождават времето на екипа и превръщат повтаряемите процеси в измерими системи.",
       copyright: "© 2026 The Reach Smart. Всички права запазени.",
+      privacyPolicyLink: "Политика за поверителност",
+    },
+    privacyPolicy: {
+      title: "Политика за поверителност",
+      lastUpdatedLabel: "Последна актуализация:",
+      lastUpdatedDate: "01.08.2026 г.",
+      closeBtn: "Затвори",
+      sections: [
+        {
+          id: "general",
+          title: "1. Обща информация",
+          paragraphs: [
+            "Настоящата Политика за поверителност описва как The Reach Smart (Смарт Рийч ЕООД, ЕИК BG208237010, със седалище и адрес на управление гр. Силистра, ул. „Христо Ботев“ 12, вх. А, ет. 4, ап. 10) (наричано по-долу „ние“, „нас“ или „Дружеството“) обработва личните данни на посетителите и клиентите на уебсайта thereachsmart.net (наричан по-долу „Сайтът“).",
+            "Ние сме администратор на лични данни по смисъла на Регламент (ЕС) 2016/679 (Общ регламент относно защитата на данните, „GDPR“) и Закона за защита на личните данни.",
+            "За въпроси относно обработката на Вашите лични данни можете да се свържете с нас на:"
+          ],
+          bullets: [
+            "Имейл: hello@thereachsmart.net",
+            "Телефон: 0899 141 901",
+            "Адрес: гр. Силистра, ул. „Христо Ботев“ 12, вх. А, ет. 4, ап. 10"
+          ]
+        },
+        {
+          id: "data-collected",
+          title: "2. Какви лични данни събираме",
+          paragraphs: [
+            "Когато попълните лийд формата на нашия Сайт, ние събираме следните данни:"
+          ],
+          bullets: [
+            "Име и фамилия",
+            "Телефонен номер",
+            "Имейл адрес",
+            "Уебсайт (по избор)",
+            "Име на бизнеса/фирмата"
+          ],
+          extraParagraphs: [
+            "Тези данни се предоставят доброволно от Вас, когато поискате консултация, оферта или контакт с нашия екип.",
+            "Освен това, при посещение на Сайта, е възможно автоматично да се събира ограничена техническа информация (напр. IP адрес, тип браузър, операционна система) чрез технически необходими бисквитки, нужни за нормалното функциониране на Сайта. Ако в бъдеще използваме аналитични или маркетингови бисквитки (напр. Google Analytics, Facebook Pixel), ще Ви уведомим чрез отделен банер за бисквитки и ще поискаме съгласието Ви, където се изисква по закон."
+          ]
+        },
+        {
+          id: "purposes",
+          title: "3. Цели и правно основание за обработка на данните",
+          paragraphs: [
+            "Обработваме Вашите лични данни за следните цели:"
+          ],
+          table: [
+            { purpose: "Обработка на запитването Ви и свързване с Вас", basis: "Предприемане на стъпки по искане на субекта на данни преди сключване на договор (чл. 6, ал. 1, б. „б“ GDPR)" },
+            { purpose: "Предоставяне на оферта и рекламни/маркетингови услуги", basis: "Изпълнение на договор (чл. 6, ал. 1, б. „б“ GDPR)" },
+            { purpose: "Изпращане на маркетингови съобщения (ако сте дали изрично съгласие)", basis: "Съгласие (чл. 6, ал. 1, б. „а“ GDPR)" },
+            { purpose: "Спазване на законови задължения (напр. счетоводни изисквани)", basis: "Законово задължение (чл. 6, ал. 1, б. „в“ GDPR)" },
+            { purpose: "Подобряване на услугите ни и защита срещу злоупотреби", basis: "Законен интерес (чл. 6, ал. 1, б. „е“ GDPR)" }
+          ]
+        },
+        {
+          id: "retention",
+          title: "4. Срок на съхранение на данните",
+          paragraphs: [
+            "Съхраняваме Вашите лични данни само толкова дълго, колкото е необходимо за постигане на целите, описани по-горе:"
+          ],
+          bullets: [
+            "Данни от лийд формата на потенциални клиенти, с които не се стигне до сключване на договор: до 12 месеца от последния контакт, освен ако не поискате по-ранното им изтриване.",
+            "Данни на клиенти, с които имаме договорни отношения: за срока на договора и допълнително 5 години след прекратяването му, съгласно счетоводното и данъчното законодателство."
+          ]
+        },
+        {
+          id: "sharing",
+          title: "5. На кого предоставяме Вашите данни",
+          paragraphs: [
+            "Не продаваме и не отдаваме под наем Вашите лични данни на трети страни за техни собствени маркетингови цели. Достъп до данните Ви може да имат:"
+          ],
+          bullets: [
+            "Служители и сътрудници на Дружеството, обвързани със задължение за конфиденциалност",
+            "Доставчици на хостинг, имейл и CRM услуги, действащи като обработващи лични данни от наше име",
+            "Счетоводни и одиторски услуги, когато е приложимо",
+            "Компетентни държавни органи, когато това се изисква по закон"
+          ],
+          extraParagraphs: [
+            "С всички обработващи лични данни имаме сключени споразумения за обработка на данни, гарантиращи адекватно ниво на защита."
+          ]
+        },
+        {
+          id: "transfers",
+          title: "6. Предаване на данни извън ЕС/ЕИП",
+          paragraphs: [
+            "Доколкото използваме доставчици на услуги, базирани извън ЕС/ЕИП — включително Google Analytics (Google Ireland Limited / Google LLC, САЩ) — предаването на данни се извършва при спазване на подходящи гаранции, като Стандартни договорни клаузи, одобрени от Европейската комисия, съгласно чл. 46 GDPR. Ако в бъдеще използваме и други доставчици извън ЕС/ЕИП (напр. хостинг, имейл маркетинг, CRM), ще актуализираме тази точка съответно."
+          ]
+        },
+        {
+          id: "rights",
+          title: "7. Вашите права като субект на данни",
+          paragraphs: [
+            "Съгласно GDPR, Вие имате следните права по отношение на Вашите лични данни:"
+          ],
+          bullets: [
+            "Право на достъп — да получите потвърждение дали обработваме Ваши данни и копие от тях",
+            "Право на коригиране — да поискате корекция на неточни или непълни данни",
+            "Право на изтриване („право да бъдеш забравен“) — при определени условия",
+            "Право на ограничаване на обработването",
+            "Право на преносимост на данните — да получите данните си в структуриран, четим формат",
+            "Право на възражение срещу обработване на основание законен интерес или директен маркетинг",
+            "Право на оттегляне на съгласие по всяко време, без това да засяга законосъобразността на обработването преди оттеглянето",
+            "Право на жалба до Комисията за защита на личните данни (КЗЛД), адрес: гр. София 1592, бул. „Проф. Цветан Лазаров“ № 2, www.cpdp.bg"
+          ],
+          extraParagraphs: [
+            "За да упражните тези права, свържете се с нас на посочените по-горе контакти."
+          ]
+        },
+        {
+          id: "cookies",
+          title: "8. Бисквитки",
+          paragraphs: [
+            "Сайтът използва технически необходими бисквитки за осигуряване на нормалната му работа, както и аналитични бисквитки чрез Google Analytics.",
+            "Google Analytics. Използваме Google Analytics, услуга за уеб анализ, предоставяна от Google Ireland Limited (и Google LLC, САЩ). Google Analytics поставя бисквитки на Вашето устройство, за да ни помогне да анализираме как посетителите използват Сайта — например кои страници посещават, откъде идват и колко време прекарват на Сайта. Събраната информация се предава и съхранява на сървъри на Google, включително извън ЕС/ЕИП."
+          ],
+          bullets: [
+            "Правно основание: Вашето съгласие (чл. 6, ал. 1, б. „а“ GDPR), дадено чрез банера за бисквитки при първо посещение на Сайта.",
+            "Данни, обработвани от Google Analytics: IP адрес (анонимизиран), тип устройство и браузър, поведение на страницата, приблизителна геолокация.",
+            "Срок на съхранение: според настройките на нашия акаунт в Google Analytics (по подразбиране до 14 месеца, освен ако не е зададено друго).",
+            "Оттегляне на съгласие: можете да откажете или оттеглите съгласието си по всяко време чрез банера за бисквитки на Сайта, или като инсталирате добавката на Google за деактивиране на Google Analytics.",
+            "Повече информация за политиката за поверителност на Google можете да намерите на: policies.google.com/privacy."
+          ],
+          extraParagraphs: [
+            "Ние поставяме бисквитки на Google Analytics само след получаване на изричното Ви съгласие чрез банер за бисквитки при първо посещение на Сайта."
+          ]
+        },
+        {
+          id: "security",
+          title: "9. Сигурност на данните",
+          paragraphs: [
+            "Прилагаме подходящи технически и организационни мерки за защита на личните данни срещу неправомерен достъп, загуба, унищожаване или разкриване, включително ограничен достъп до данните, сигурни системи за съхранение и обучение на персонала по въпросите на защитата на данните."
+          ]
+        },
+        {
+          id: "changes",
+          title: "10. Промени в настоящата политика",
+          paragraphs: [
+            "Можем да актуализираме тази Политика за поверителност периодично. При съществени промени ще публикуваме актуализираната версия на тази страница с нова дата на последна актуализация."
+          ]
+        },
+        {
+          id: "contact",
+          title: "11. Контакт",
+          paragraphs: [
+            "При въпроси относно тази Политика за поверителност или обработката на Вашите лични данни, моля свържете се с нас:"
+          ],
+          bullets: [
+            "Имейл: hello@thereachsmart.net",
+            "Телефон: 0899 141 901",
+            "Адрес: гр. Силистра, ул. „Христо Ботев“ 12, вх. А, ет. 4, ап. 10"
+          ]
+        }
+      ]
     },
   },
   en: {
@@ -879,6 +1032,158 @@ export const copy = {
     footer: {
       tagline: "AI automations for SaaS and e-commerce businesses that give team time back and turn repetitive processes into measurable systems.",
       copyright: "© 2026 The Reach Smart. All rights reserved.",
+      privacyPolicyLink: "Privacy Policy",
+    },
+    privacyPolicy: {
+      title: "Privacy Policy",
+      lastUpdatedLabel: "Last Updated:",
+      lastUpdatedDate: "August 1, 2026",
+      closeBtn: "Close",
+      sections: [
+        {
+          id: "general",
+          title: "1. General Information",
+          paragraphs: [
+            "This Privacy Policy describes how The Reach Smart (Smart Reach Ltd., UIC BG208237010, registered address: 12 Hristo Botev Str., Ent. A, Fl. 4, Ap. 10, Silistra, Bulgaria) (hereinafter referred to as \"we\", \"us\", or \"the Company\") processes personal data of visitors and clients of the website thereachsmart.net (hereinafter referred to as the \"Website\").",
+            "We are a controller of personal data within the meaning of Regulation (EU) 2016/679 (General Data Protection Regulation, \"GDPR\") and the Bulgarian Personal Data Protection Act.",
+            "For questions regarding the processing of your personal data, you can contact us at:"
+          ],
+          bullets: [
+            "Email: hello@thereachsmart.net",
+            "Phone: +359 899 141 901",
+            "Address: 12 Hristo Botev Str., Ent. A, Fl. 4, Ap. 10, Silistra, Bulgaria"
+          ]
+        },
+        {
+          id: "data-collected",
+          title: "2. What Personal Data We Collect",
+          paragraphs: [
+            "When you fill out the lead form on our Website, we collect the following data:"
+          ],
+          bullets: [
+            "First and last name",
+            "Phone number",
+            "Email address",
+            "Website (optional)",
+            "Business/Company name"
+          ],
+          extraParagraphs: [
+            "This data is provided voluntarily by you when you request a consultation, quote, or contact with our team.",
+            "In addition, when visiting the Website, limited technical information (e.g., IP address, browser type, operating system) may be automatically collected via technically necessary cookies required for the normal operation of the Website. If in the future we use analytical or marketing cookies (e.g., Google Analytics, Meta Pixel), we will inform you via a separate cookie banner and request your consent where required by law."
+          ]
+        },
+        {
+          id: "purposes",
+          title: "3. Purposes and Legal Basis for Data Processing",
+          paragraphs: [
+            "We process your personal data for the following purposes:"
+          ],
+          table: [
+            { purpose: "Processing your request and contacting you", basis: "Taking steps at the request of the data subject prior to entering into a contract (Art. 6(1)(b) GDPR)" },
+            { purpose: "Providing quotes and advertising/marketing services", basis: "Performance of a contract (Art. 6(1)(b) GDPR)" },
+            { purpose: "Sending marketing messages (if explicit consent is given)", basis: "Consent (Art. 6(1)(a) GDPR)" },
+            { purpose: "Compliance with legal obligations (e.g., accounting requirements)", basis: "Legal obligation (Art. 6(1)(c) GDPR)" },
+            { purpose: "Improving our services and protection against misuse", basis: "Legitimate interest (Art. 6(1)(f) GDPR)" }
+          ]
+        },
+        {
+          id: "retention",
+          title: "4. Data Retention Period",
+          paragraphs: [
+            "We store your personal data only for as long as necessary to fulfill the purposes described above:"
+          ],
+          bullets: [
+            "Lead form data of potential clients with whom no contract is concluded: up to 12 months from the last contact, unless earlier deletion is requested.",
+            "Client data with whom we have a contractual relationship: for the duration of the contract plus an additional 5 years after termination, in accordance with accounting and tax legislation."
+          ]
+        },
+        {
+          id: "sharing",
+          title: "5. Who We Share Your Data With",
+          paragraphs: [
+            "We do not sell or rent your personal data to third parties for their own marketing purposes. Access to your data may be granted to:"
+          ],
+          bullets: [
+            "Employees and collaborators of the Company bound by confidentiality obligations",
+            "Hosting, email, and CRM service providers acting as data processors on our behalf",
+            "Accounting and auditing services, where applicable",
+            "Competent state authorities when required by law"
+          ],
+          extraParagraphs: [
+            "We have data processing agreements in place with all data processors to ensure an adequate level of protection."
+          ]
+        },
+        {
+          id: "transfers",
+          title: "6. Data Transfers Outside the EU/EEA",
+          paragraphs: [
+            "To the extent that we use service providers based outside the EU/EEA — including Google Analytics (Google Ireland Limited / Google LLC, USA) — data transfers take place in compliance with appropriate safeguards, such as Standard Contractual Clauses approved by the European Commission pursuant to Art. 46 GDPR. If we use other non-EU/EEA providers in the future, we will update this section accordingly."
+          ]
+        },
+        {
+          id: "rights",
+          title: "7. Your Rights as a Data Subject",
+          paragraphs: [
+            "Under GDPR, you have the following rights regarding your personal data:"
+          ],
+          bullets: [
+            "Right of Access — to obtain confirmation whether we process your data and a copy of it",
+            "Right to Rectification — to request correction of inaccurate or incomplete data",
+            "Right to Erasure (\"right to be forgotten\") — under certain conditions",
+            "Right to Restriction of Processing",
+            "Right to Data Portability — to receive your data in a structured, machine-readable format",
+            "Right to Object — to processing based on legitimate interest or direct marketing",
+            "Right to Withdraw Consent — at any time without affecting the lawfulness of processing prior to withdrawal",
+            "Right to Lodge a Complaint — with the Commission for Personal Data Protection (CPDP), address: 2 Prof. Tsvetan Lazarov Blvd., Sofia 1592, Bulgaria, www.cpdp.bg"
+          ],
+          extraParagraphs: [
+            "To exercise these rights, contact us at the details provided above."
+          ]
+        },
+        {
+          id: "cookies",
+          title: "8. Cookies",
+          paragraphs: [
+            "The Website uses essential cookies to ensure its normal operation, as well as analytical cookies via Google Analytics.",
+            "Google Analytics. We use Google Analytics, a web analytics service provided by Google Ireland Limited (and Google LLC, USA). Google Analytics places cookies on your device to help us analyze how visitors use the Website. The information collected is transmitted to and stored on Google servers, including outside the EU/EEA."
+          ],
+          bullets: [
+            "Legal Basis: Your consent (Art. 6(1)(a) GDPR), given via the cookie banner upon your first visit.",
+            "Data processed: IP address (anonymized), device & browser type, page behavior, approximate geolocation.",
+            "Retention period: according to our Google Analytics account settings (default up to 14 months).",
+            "Consent withdrawal: you can opt out via the cookie banner or by installing the Google Analytics Opt-out Browser Add-on: tools.google.com/dlpage/gaoptout."
+          ],
+          extraParagraphs: [
+            "We place Google Analytics cookies only after obtaining your explicit consent via a cookie banner upon your first visit to the Website."
+          ]
+        },
+        {
+          id: "security",
+          title: "9. Data Security",
+          paragraphs: [
+            "We apply appropriate technical and organizational measures to protect personal data against unauthorized access, loss, destruction, or disclosure."
+          ]
+        },
+        {
+          id: "changes",
+          title: "10. Changes to This Policy",
+          paragraphs: [
+            "We may update this Privacy Policy periodically. In case of material changes, we will publish the updated version on this page with a new last updated date."
+          ]
+        },
+        {
+          id: "contact",
+          title: "11. Contact",
+          paragraphs: [
+            "For questions regarding this Privacy Policy or the processing of your personal data, please contact us:"
+          ],
+          bullets: [
+            "Email: hello@thereachsmart.net",
+            "Phone: +359 899 141 901",
+            "Address: 12 Hristo Botev Str., Ent. A, Fl. 4, Ap. 10, Silistra, Bulgaria"
+          ]
+        }
+      ]
     },
   },
   fr: {
@@ -1263,6 +1568,149 @@ export const copy = {
     footer: {
       tagline: "Des automatisations IA pour le SaaS et l'e-commerce qui redonnent du temps à votre équipe et transforment les processus répétitifs en systèmes mesurables.",
       copyright: "© 2026 The Reach Smart. Tous droits réservés.",
+      privacyPolicyLink: "Politique de confidentialité",
+    },
+    privacyPolicy: {
+      title: "Politique de confidentialité",
+      lastUpdatedLabel: "Dernière mise à jour :",
+      lastUpdatedDate: "1er août 2026",
+      closeBtn: "Fermer",
+      sections: [
+        {
+          id: "general",
+          title: "1. Informations générales",
+          paragraphs: [
+            "La présente Politique de confidentialité décrit comment The Reach Smart (Smart Reach EOOD, EIK BG208237010, ayant son siège social au 12 rue Hristo Botev, Entr. A, Ét. 4, App. 10, Silistra, Bulgarie) (ci-après désignée « nous », « notre » ou « la Société ») traite les données personnelles des visiteurs et clients du site web thereachsmart.net (ci-après désigné « le Site »).",
+            "Nous sommes responsable du traitement des données personnelles au sens du Règlement (UE) 2016/679 (Règlement général sur la protection des données, « RGPD ») et de la loi bulgare sur la protection des données personnelles.",
+            "Pour toute question concernant le traitement de vos données personnelles, vous pouvez nous contacter à :"
+          ],
+          bullets: [
+            "E-mail : hello@thereachsmart.net",
+            "Téléphone : +359 899 141 901",
+            "Adresse : 12 rue Hristo Botev, Entr. A, Ét. 4, App. 10, Silistra, Bulgarie"
+          ]
+        },
+        {
+          id: "data-collected",
+          title: "2. Quelles données personnelles nous collectons",
+          paragraphs: [
+            "Lorsque vous remplissez le formulaire de contact sur notre Site, nous collectons les données suivantes :"
+          ],
+          bullets: [
+            "Nom et prénom",
+            "Numéro de téléphone",
+            "Adresse e-mail",
+            "Site web (facultatif)",
+            "Nom de l'entreprise / société"
+          ],
+          extraParagraphs: [
+            "Ces données sont fournies volontairement par vous lorsque vous demandez une consultation, un devis ou une prise de contact avec notre équipe.",
+            "De plus, lors de votre visite sur le Site, des informations techniques limitées (ex. adresse IP, type de navigateur, système d'exploitation) peuvent être collectées automatiquement via des cookies techniquement nécessaires au bon fonctionnement du Site. Si nous utilisons à l'avenir des cookies analytiques ou marketing (ex. Google Analytics, Meta Pixel), nous vous en informerons via un bandeau dédié et vous demanderons votre consentement préalable."
+          ]
+        },
+        {
+          id: "purposes",
+          title: "3. Finalités et bases légales du traitement",
+          paragraphs: [
+            "Nous traitons vos données personnelles pour les finalités suivantes :"
+          ],
+          table: [
+            { purpose: "Traitement de votre demande et prise de contact", basis: "Exécution de mesures précontractuelles à la demande de la personne concernée (Art. 6, par. 1, f) b) du RGPD)" },
+            { purpose: "Fourniture de devis et services marketing/publicitaires", basis: "Exécution d'un contrat (Art. 6, par. 1, f) b) du RGPD)" },
+            { purpose: "Envoi de messages marketing (si consentement explicite)", basis: "Consentement (Art. 6, par. 1, f) a) du RGPD)" },
+            { purpose: "Respect des obligations légales (ex. exigences comptables)", basis: "Obligation légale (Art. 6, par. 1, f) c) du RGPD)" },
+            { purpose: "Amélioration de nos services et protection contre les abus", basis: "Intérêt légitime (Art. 6, par. 1, f) f) du RGPD)" }
+          ]
+        },
+        {
+          id: "retention",
+          title: "4. Durée de conservation des données",
+          paragraphs: [
+            "Nous ne conservons vos données personnelles que pendant la durée nécessaire aux finalités décrites ci-dessus :"
+          ],
+          bullets: [
+            "Données du formulaire de prospects sans conclusion de contrat : jusqu'à 12 mois à compter du dernier contact, sauf demande de suppression anticipée.",
+            "Données des clients avec lesquels nous avons une relation contractuelle : pendant la durée du contrat plus 5 ans après sa résiliation, conformément à la législation comptable et fiscale."
+          ]
+        },
+        {
+          id: "sharing",
+          title: "5. À qui nous communiquons vos données",
+          paragraphs: [
+            "Nous ne vendons ni ne louons vos données personnelles à des tiers à des fins marketing. L'accès à vos données peut être accordé à :"
+          ],
+          bullets: [
+            "Employés et collaborateurs de la Société soumis à une obligation de confidentialité",
+            "Prestataires d'hébergement, d'e-mailing et de CRM agissant en tant que sous-traitants",
+            "Services de comptabilité et d'audit, le cas échéant",
+            "Autorités publiques compétentes lorsque la loi l'exige"
+          ],
+          extraParagraphs: [
+            "Nous concluons des accords de traitement de données avec tous les sous-traitants garantissant un niveau de protection adéquat."
+          ]
+        },
+        {
+          id: "transfers",
+          title: "6. Transferts de données hors UE/EEE",
+          paragraphs: [
+            "Dans la mesure où nous utilisons des prestataires situés hors UE/EEE — notamment Google Analytics (Google Ireland Limited / Google LLC, États-Unis) — les transferts s'effectuent moyennant des garanties appropriées, telles que les Clauses contractuelles types approuvées par la Commission européenne conformément à l'Art. 46 du RGPD."
+          ]
+        },
+        {
+          id: "rights",
+          title: "7. Vos droits en tant que personne concernée",
+          paragraphs: [
+            "Conformément au RGPD, vous disposez des droits suivants :"
+          ],
+          bullets: [
+            "Droit d'accès — obtenir la confirmation que vos données sont traitées et en recevoir une copie",
+            "Droit de rectification — demander la correction de données inexactes ou incomplètes",
+            "Droit à l'effacement (« droit à l'oubli ») — sous certaines conditions",
+            "Droit à la limitation du traitement",
+            "Droit à la portabilité des données — recevoir vos données dans un format structuré et lisible par machine",
+            "Droit d'opposition — s'opposer au traitement fondé sur l'intérêt légitime ou le marketing direct",
+            "Droit de retirer votre consentement — à tout moment",
+            "Droit d'introduire une réclamation — auprès de l'autorité de protection des données compétente (CPDP en Bulgarie : www.cpdp.bg ou la CNIL en France)"
+          ],
+          extraParagraphs: [
+            "Pour exercer ces droits, contactez-nous aux coordonnées indiquées ci-dessus."
+          ]
+        },
+        {
+          id: "cookies",
+          title: "8. Cookies",
+          paragraphs: [
+            "Le Site utilise des cookies essentiels pour assurer son bon fonctionnement, ainsi que des cookies analytiques via Google Analytics.",
+            "Google Analytics. Nous utilisons Google Analytics (Google Ireland Limited / Google LLC). Google Analytics dépose des cookies pour nous aider à analyser l'utilisation du Site. Vous pouvez retirer votre consentement à tout moment via le module complémentaire : tools.google.com/dlpage/gaoptout."
+          ]
+        },
+        {
+          id: "security",
+          title: "9. Sécurité des données",
+          paragraphs: [
+            "Nous appliquons des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, destruction ou divulgation."
+          ]
+        },
+        {
+          id: "changes",
+          title: "10. Modifications de cette politique",
+          paragraphs: [
+            "Nous pouvons mettre à jour cette politique périodiquement. En cas de modification importante, nous publierons la version mise à jour sur ce Site."
+          ]
+        },
+        {
+          id: "contact",
+          title: "11. Contact",
+          paragraphs: [
+            "Pour toute question concernant cette Politique de confidentialité, veuillez nous contacter :"
+          ],
+          bullets: [
+            "E-mail : hello@thereachsmart.net",
+            "Téléphone : +359 899 141 901",
+            "Adresse : 12 rue Hristo Botev, Entr. A, Ét. 4, App. 10, Silistra, Bulgarie"
+          ]
+        }
+      ]
     },
   },
 };

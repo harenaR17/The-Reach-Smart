@@ -16,6 +16,7 @@ import DiagnosticSection from "../components/DiagnosticSection";
 import FaqSection from "../components/FaqSection";
 import CtaSection from "../components/CtaSection";
 import ContactFormModal from "../components/ContactFormModal";
+import PrivacyPolicyModal from "../components/PrivacyPolicyModal";
 import FooterSection from "../components/FooterSection";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
   const [lang, setLang] = useState("bg");
   const [isScrolled, setIsScrolled] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -98,19 +100,27 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
-    );
+    // Small timeout ensures all components have mounted and appended their refs
+    const timer = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // stop watching once visible
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
 
-    revealRefs.current.forEach((ref) => observer.observe(ref));
-    return () => observer.disconnect();
+      // Query all .reveal elements directly from the DOM — catches every section
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+      return () => observer.disconnect();
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const activeCopy = copy[lang] || copy.bg;
@@ -191,6 +201,7 @@ export default function Home() {
         <FooterSection
           activeCopy={activeCopy}
           setModalOpen={setModalOpen}
+          setPrivacyModalOpen={setPrivacyModalOpen}
           lang={lang}
         />
       </div>
@@ -206,6 +217,13 @@ export default function Home() {
         handleFormSubmit={handleFormSubmit}
         activeCopy={activeCopy}
         lang={lang}
+      />
+
+      {/* Privacy Policy Modal */}
+      <PrivacyPolicyModal
+        isOpen={privacyModalOpen}
+        onClose={() => setPrivacyModalOpen(false)}
+        activeCopy={activeCopy}
       />
     </>
   );
