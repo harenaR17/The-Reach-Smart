@@ -1900,3 +1900,154 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1rem;
   }
 }
+
+/* OrbitScene2 Styles */
+.orbit-scene-2-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.orbit-scene-2-stage {
+  position: relative;
+  width: 640px;
+  height: 566px;
+  flex-shrink: 0;
+  transform-origin: top center;
+  border-radius: 22px;
+  overflow: hidden;
+  background:
+    radial-gradient(560px 420px at 18% -6%, rgba(107,74,226,0.30), rgba(107,74,226,0) 60%),
+    radial-gradient(520px 420px at 88% 104%, rgba(90,64,220,0.26), rgba(90,64,220,0) 60%),
+    linear-gradient(160deg, #110f1f 0%, #0a0914 45%, #0c0a18 100%);
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.55);
+}
+
+.orbit-scene-2-stage .noise-vignette {
+  position: absolute; inset: 0;
+  box-shadow: inset 0 0 120px rgba(0,0,0,0.45);
+  pointer-events: none;
+}
+
+.orbit-scene-2-stage svg.connectors { position: absolute; inset: 0; width: 640px; height: 566px; }
+.orbit-scene-2-stage .center-icon { position: absolute; left: 200px; top: 140px; width: 240px; height: 220px; }
+
+.orbit-scene-2-stage .card {
+  position: absolute;
+  background: rgba(21,19,34,0.66);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 14px 18px 16px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.orbit-scene-2-stage .card .icon-box {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 11px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+.orbit-scene-2-stage .card .icon-box svg { width: 19px; height: 19px; }
+.orbit-scene-2-stage .card h3 {
+  margin: 0 0 4px;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+.orbit-scene-2-stage .card p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  font-weight: 400;
+  color: #9791ac;
+}
+
+.orbit-scene-2-stage .ic-green   { background: #26c46a; }
+.orbit-scene-2-stage .ic-slate   { background: #262f4c; }
+.orbit-scene-2-stage .ic-violet  { background: #241f3d; }
+.orbit-scene-2-stage .ic-coral   { background: #e6566f; }
+
+/* --- card placements & floating animations --- */
+.orbit-scene-2-stage #card-ai      { left: 214px; top: 24px;  width: 210px; animation: floatCard 4s ease-in-out infinite; }
+.orbit-scene-2-stage #card-lead    { left: 6px;   top: 176px; width: 188px; animation: floatCard 4.6s ease-in-out 0.8s infinite; }
+.orbit-scene-2-stage #card-out     { left: 428px; top: 176px; width: 206px; animation: floatCard 4.2s ease-in-out 1.4s infinite; }
+.orbit-scene-2-stage #card-ugc     { left: 48px;  top: 354px; width: 214px; animation: floatCard 4.8s ease-in-out 0.4s infinite; }
+.orbit-scene-2-stage #card-pp      { left: 378px; top: 354px; width: 214px; animation: floatCard 4.4s ease-in-out 1.2s infinite; }
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* 3D Layer Assemble & Split Animations */
+.orbit-scene-2-stage .diamond-layer {
+  transform-box: fill-box;
+  transform-origin: center center;
+}
+
+.orbit-scene-2-stage .layer-top,
+.orbit-scene-2-stage .layer-top-glow {
+  animation: assembleTop 6s ease-in-out infinite;
+}
+
+.orbit-scene-2-stage .layer-middle,
+.orbit-scene-2-stage .layer-middle-glow {
+  animation: assembleMiddle 6s ease-in-out infinite;
+}
+
+.orbit-scene-2-stage .layer-bottom,
+.orbit-scene-2-stage .layer-bottom-glow {
+  animation: assembleBottom 6s ease-in-out infinite;
+}
+
+.orbit-scene-2-stage .logo-fade {
+  animation: logoPulseFade 6s ease-in-out infinite;
+}
+
+@keyframes assembleTop {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(24px); /* Moves down to compress/assemble into one */
+  }
+}
+
+@keyframes assembleMiddle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(0); /* Stays in center */
+  }
+}
+
+@keyframes assembleBottom {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(-24px); /* Moves up to compress/assemble into one */
+  }
+}
+
+@keyframes logoPulseFade {
+  0%, 100% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 10px rgba(185, 160, 247, 0.6));
+  }
+  40%, 60% {
+    opacity: 1;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.95));
+  }
+}
+
+

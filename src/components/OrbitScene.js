@@ -105,7 +105,14 @@ export default function OrbitScene() {
           <img
             src="https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFNhoy6fH3FlD2JrvZNO0sSxTX8m1ofitkCjbp4"
             alt="The Reach Smart"
-            style={{ width: "80%", height: "80%", objectFit: "contain" }}
+            style={{
+              width: "75%",
+              height: "75%",
+              objectFit: "contain",
+              borderRadius: "50%",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              boxShadow: "0 4px 14px rgba(0,0,0,0.3)"
+            }}
           />
         </div>
       </div>

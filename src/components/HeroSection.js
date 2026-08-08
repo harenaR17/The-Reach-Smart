@@ -2,6 +2,7 @@
 import React from "react";
 import { ArrowRightIcon } from "@/app/icons";
 import OrbitScene from "./OrbitScene";
+import OrbitScene2 from "./OrbitScene2";
 
 export default function HeroSection({ activeCopy, setModalOpen, lang }) {
   const highlights = activeCopy.hero.highlights || [];
@@ -111,7 +112,8 @@ export default function HeroSection({ activeCopy, setModalOpen, lang }) {
 
         {/* Right orbit scene */}
         <div className="hero-mockup-wrapper" style={{ width: "100%" }}>
-          <OrbitScene />
+          <OrbitScene2 lang={lang} />
+          {/* <OrbitScene2 /> */}
         </div>
       </div>
     </section>
