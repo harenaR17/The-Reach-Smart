@@ -1,4 +1,5 @@
 import { Space_Grotesk, Inter, Instrument_Serif } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -51,7 +52,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="bg" className={`${spaceGrotesk.variable} ${inter.variable} ${instrumentSerif.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-9RXBGT3LLL"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9RXBGT3LLL');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
