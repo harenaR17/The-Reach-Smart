@@ -5,7 +5,7 @@ export const runtime = "edge";
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, email, company, message, lang } = body;
+    const { name, email, company, website, processCategory, message, lang } = body;
 
     // Server-side validation
     if (!name || !email) {
@@ -36,6 +36,8 @@ export async function POST(request) {
         name,
         email,
         company: company || "N/A",
+        website: website || "N/A",
+        process_requested: processCategory || "N/A",
         message: message || "No message provided",
         language: lang || "bg",
         source: "Reach Smart Website Contact Form",
@@ -47,6 +49,26 @@ export async function POST(request) {
       const errorText = await response.text();
       console.error(`Webhook returned status ${response.status}: ${errorText}`);
       throw new Error(`Webhook responded with status ${response.status}`);
+    }
+
+    // Verify the webhook confirmed the lead was saved
+    let webhookData;
+    try {
+      webhookData = await response.json();
+    } catch {
+      console.error("Webhook response was not valid JSON");
+      return NextResponse.json(
+        { error: "Unexpected response from the server. Please try again." },
+        { status: 502 }
+      );
+    }
+
+    if (webhookData?.status !== "submitted") {
+      console.error("Webhook did not confirm submission:", webhookData);
+      return NextResponse.json(
+        { error: "The server could not confirm your submission. Please try again." },
+        { status: 502 }
+      );
     }
 
     return NextResponse.json({ success: true }, { status: 200 });

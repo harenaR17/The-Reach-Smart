@@ -68,59 +68,35 @@ export default function OrbitScene2({ lang = "bg" }) {
         <div className="center-icon">
           <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <defs>
-              <linearGradient id="diamondGrad" x1="0" y1="50" x2="0" y2="200" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="#f2ecff" />
-                <stop offset="30%" stopColor="#b9a0f7" />
-                <stop offset="65%" stopColor="#7c5cf0" />
-                <stop offset="100%" stopColor="#4433b8" />
-              </linearGradient>
-              <filter id="glowBlur" x="-80%" y="-80%" width="260%" height="260%">
-                <feGaussianBlur stdDeviation="10" />
-              </filter>
-              <clipPath id="topFacetClip">
-                <polygon points="120,58 208,102 120,146 32,102" />
+              <clipPath id="logoCircleClip">
+                <circle cx="120" cy="110" r="50" />
               </clipPath>
+              <filter id="logoGlow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="8" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
             </defs>
 
-            <g filter="url(#glowBlur)" opacity="0.7">
-              <polygon className="layer-top-glow" points="120,58 208,102 120,146 32,102" fill="#8b5cf6" />
-              <polygon className="layer-middle-glow" points="120,82 208,126 120,170 32,126" fill="#7c4dff" />
-              <polygon className="layer-bottom-glow" points="120,106 208,150 120,194 32,150" fill="#6d4fe0" />
-            </g>
+            {/* Soft glow ring behind the logo */}
+            <circle cx="120" cy="110" r="54" fill="#7c5cf0" opacity="0.18" filter="url(#logoGlow)" />
 
-            {/* Bottom Layer */}
-            <g className="diamond-layer layer-bottom">
-              <polygon points="120,106 208,150 120,194 32,150" fill="url(#diamondGrad)" fillOpacity="0.55" stroke="#9b83f0" strokeWidth="1.3" strokeOpacity="0.8" />
-              <line x1="32" y1="150" x2="32" y2="126" stroke="#9b83f0" strokeWidth="1.1" strokeOpacity="0.55" />
-              <line x1="208" y1="150" x2="208" y2="126" stroke="#9b83f0" strokeWidth="1.1" strokeOpacity="0.55" />
-            </g>
+            {/* Logo circle background */}
+            <circle cx="120" cy="110" r="50" fill="#1a1530" stroke="rgba(255,255,255,0.18)" strokeWidth="1.2" />
 
-            {/* Middle Layer */}
-            <g className="diamond-layer layer-middle">
-              <polygon points="120,82 208,126 120,170 32,126" fill="url(#diamondGrad)" fillOpacity="0.7" stroke="#a98cf5" strokeWidth="1.3" strokeOpacity="0.85" />
-              <line x1="32" y1="126" x2="32" y2="102" stroke="#a98cf5" strokeWidth="1.1" strokeOpacity="0.6" />
-              <line x1="208" y1="126" x2="208" y2="102" stroke="#a98cf5" strokeWidth="1.1" strokeOpacity="0.6" />
-            </g>
-
-            {/* Top Layer & Logo */}
-            <g className="diamond-layer layer-top">
-              <polygon points="120,58 208,102 120,146 32,102" fill="#241f3d" />
-              <image
-                className="logo-fade"
-                href="https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFNhoy6fH3FlD2JrvZNO0sSxTX8m1ofitkCjbp4"
-                xlinkHref="https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFNhoy6fH3FlD2JrvZNO0sSxTX8m1ofitkCjbp4"
-                x="32"
-                y="52"
-                width="176"
-                height="100"
-                preserveAspectRatio="xMidYMid slice"
-                clipPath="url(#topFacetClip)"
-                transform="rotate(0 120 102) scale(1 1)"
-                style={{ transformOrigin: "120px 102px" }}
-              />
-              <polygon points="120,58 208,102 120,146 32,102" fill="none" stroke="#e3d8ff" strokeWidth="1.6" />
-              <polygon points="120,74 166,102 120,130 74,102" fill="none" stroke="#ffffff" strokeOpacity="0.45" strokeWidth="1.1" />
-            </g>
+            {/* Logo image */}
+            <image
+              href="https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFNhoy6fH3FlD2JrvZNO0sSxTX8m1ofitkCjbp4"
+              xlinkHref="https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFNhoy6fH3FlD2JrvZNO0sSxTX8m1ofitkCjbp4"
+              x="70"
+              y="60"
+              width="100"
+              height="100"
+              preserveAspectRatio="xMidYMid meet"
+              clipPath="url(#logoCircleClip)"
+            />
           </svg>
         </div>
 

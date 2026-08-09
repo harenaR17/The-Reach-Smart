@@ -1,121 +1,199 @@
 "use client";
-import React from "react";
-import Image from "next/image";
+import React, { useEffect, useRef } from "react";
 
-export default function OrbitScene() {
+export default function OrbitScene2({ lang = "bg" }) {
+  const T = {
+    bg: [
+      "отговори за секунди",
+      "точните компании и хора",
+      "персонализиран follow-up",
+      "повече рекламни тестове",
+      "повече повторни покупки",
+    ],
+    en: [
+      "answers in seconds",
+      "the right companies and people",
+      "personalized follow-up",
+      "more ad tests",
+      "more repeat purchases",
+    ],
+    fr: [
+      "des réponses en quelques secondes",
+      "les bonnes entreprises et les bonnes personnes",
+      "un suivi personnalisé",
+      "plus de tests publicitaires",
+      "plus d'achats répétés",
+    ],
+  };
+  const t = T[lang] || T.bg;
+  const wrapRef = useRef(null);
+  const stageRef = useRef(null);
+
+  useEffect(() => {
+    function fitStage() {
+      if (!wrapRef.current || !stageRef.current) return;
+      const available = wrapRef.current.clientWidth;
+      const scale = Math.min(1, available / 640);
+      stageRef.current.style.transform = `scale(${scale})`;
+      wrapRef.current.style.height = `${566 * scale}px`;
+    }
+
+    fitStage();
+    window.addEventListener("resize", fitStage);
+    return () => window.removeEventListener("resize", fitStage);
+  }, []);
+
   return (
-    <section className="diagram" aria-label="Reach Smart platform overview">
-      <svg className="connectors" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#C9BBF2" strokeOpacity="0.7" strokeWidth="0.32" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M48.5,23 L48.5,34.5"/>
-          <path d="M50,23 L50,34.5"/>
-          <path d="M51.5,23 L51.5,34.5"/>
+    <div className="orbit-scene-2-wrap" ref={wrapRef}>
+      <div className="orbit-scene-2-stage" id="stage" ref={stageRef}>
+        <svg className="connectors" viewBox="0 0 640 566" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#8f7ce8" strokeOpacity="0.1" strokeWidth="1">
+            <polygon points="320,150 540,266 320,382 100,266" />
+            <polygon points="320,190 460,266 320,342 180,266" />
+          </g>
+          <g fill="none" stroke="#8f7ce8" strokeOpacity="0.4" strokeWidth="2">
+            {/* Top AI Support -> Top facet of center diamond */}
+            <path d="M320,110 L320,228" />
+            {/* Left Lead Finder -> Left facet of center diamond */}
+            <path d="M194,220 L213,220 L213,242 L290,242" />
+            {/* Right Outreach -> Right facet of center diamond */}
+            <path d="M430,220 L418,220 L418,242 L350,242" />
+            {/* Bottom Left UGC -> Bottom-left facet of center diamond */}
+            <path d="M262,398 L252,398 L252,282 L275,282" />
+            {/* Bottom Right Post-Purchase -> Bottom-right facet of center diamond */}
+            <path d="M378,398 L388,398 L388,282 L365,282" />
+          </g>
+        </svg>
 
-          <path d="M33.5,37.25 H40.5 V46.5 H34"/>
-          <path d="M33.5,38.75 H42 V48 H34"/>
-          <path d="M33.5,40.25 H43.5 V49.5 H34"/>
+        <div className="center-icon">
+          <svg viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <linearGradient id="diamondGrad" x1="0" y1="50" x2="0" y2="200" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="#f2ecff" />
+                <stop offset="30%" stopColor="#b9a0f7" />
+                <stop offset="65%" stopColor="#7c5cf0" />
+                <stop offset="100%" stopColor="#4433b8" />
+              </linearGradient>
+              <filter id="glowBlur" x="-80%" y="-80%" width="260%" height="260%">
+                <feGaussianBlur stdDeviation="10" />
+              </filter>
+              <clipPath id="topFacetClip">
+                <polygon points="120,58 208,102 120,146 32,102" />
+              </clipPath>
+              <clipPath id="logoCircleClip">
+                <circle cx="120" cy="102" r="32" />
+              </clipPath>
+            </defs>
 
-          <path d="M66.5,37.25 H59.5 V46.5 H66"/>
-          <path d="M66.5,38.75 H58 V48 H66"/>
-          <path d="M66.5,40.25 H56.5 V49.5 H66"/>
+            <g filter="url(#glowBlur)" opacity="0.7">
+              <polygon className="layer-top-glow" points="120,58 208,102 120,146 32,102" fill="#8b5cf6" />
+              <polygon className="layer-middle-glow" points="120,82 208,126 120,170 32,126" fill="#7c4dff" />
+              <polygon className="layer-bottom-glow" points="120,106 208,150 120,194 32,150" fill="#6d4fe0" />
+            </g>
 
-          <path d="M33.5,74.75 H40.5 V55.5 H34"/>
-          <path d="M33.5,76.25 H42 V57 H34"/>
-          <path d="M33.5,77.75 H43.5 V58.5 H34"/>
+            {/* Bottom Layer */}
+            <g className="diamond-layer layer-bottom">
+              <polygon points="120,106 208,150 120,194 32,150" fill="url(#diamondGrad)" fillOpacity="0.55" stroke="#9b83f0" strokeWidth="1.3" strokeOpacity="0.8" />
+              <line x1="32" y1="150" x2="32" y2="126" stroke="#9b83f0" strokeWidth="1.1" strokeOpacity="0.55" />
+              <line x1="208" y1="150" x2="208" y2="126" stroke="#9b83f0" strokeWidth="1.1" strokeOpacity="0.55" />
+            </g>
 
-          <path d="M66.5,74.75 H59.5 V55.5 H66"/>
-          <path d="M66.5,76.25 H58 V57 H66"/>
-          <path d="M66.5,77.75 H56.5 V58.5 H66"/>
-        </g>
-      </svg>
+            {/* Middle Layer */}
+            <g className="diamond-layer layer-middle">
+              <polygon points="120,82 208,126 120,170 32,126" fill="url(#diamondGrad)" fillOpacity="0.7" stroke="#a98cf5" strokeWidth="1.3" strokeOpacity="0.85" />
+              <line x1="32" y1="126" x2="32" y2="102" stroke="#a98cf5" strokeWidth="1.1" strokeOpacity="0.6" />
+              <line x1="208" y1="126" x2="208" y2="102" stroke="#a98cf5" strokeWidth="1.1" strokeOpacity="0.6" />
+            </g>
 
-      <div className="card top">
-        <div className="icon-tile" style={{ background: "#2c2318" }}>
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ color: "#F2C14E" }} xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="4.5" width="18" height="12" rx="3.5" stroke="currentColor" strokeWidth="1.8"/>
-            <path d="M8 16.5 L5 20 L5 16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-            <circle cx="8.5" cy="10.5" r="1" fill="currentColor"/>
-            <circle cx="12" cy="10.5" r="1" fill="currentColor"/>
-            <circle cx="15.5" cy="10.5" r="1" fill="currentColor"/>
+            {/* Top Layer & Logo */}
+            <g className="diamond-layer layer-top">
+              <polygon points="120,58 208,102 120,146 32,102" fill="#241f3d" />
+              {/* Circle background behind logo */}
+              <circle cx="120" cy="102" r="32" fill="#1a1530" stroke="rgba(255,255,255,0.2)" strokeWidth="1" />
+              <image
+                className="logo-fade"
+                href="https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFNhoy6fH3FlD2JrvZNO0sSxTX8m1ofitkCjbp4"
+                xlinkHref="https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFNhoy6fH3FlD2JrvZNO0sSxTX8m1ofitkCjbp4"
+                x="88"
+                y="70"
+                width="64"
+                height="64"
+                preserveAspectRatio="xMidYMid meet"
+                clipPath="url(#logoCircleClip)"
+              />
+              <polygon points="120,58 208,102 120,146 32,102" fill="none" stroke="#e3d8ff" strokeWidth="1.6" />
+
+            </g>
           </svg>
         </div>
-        <div className="text">
+
+        {/* AI Support */}
+        <div className="card" id="card-ai">
+          <div className="icon-box ic-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0c1a12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              <circle cx="7.5" cy="11.5" r="1" fill="#0c1a12" stroke="none" />
+              <circle cx="11.5" cy="11.5" r="1" fill="#0c1a12" stroke="none" />
+              <circle cx="15.5" cy="11.5" r="1" fill="#0c1a12" stroke="none" />
+            </svg>
+          </div>
           <h3>AI Support</h3>
-          <p>Answers in seconds</p>
+          <p>{t[0]}</p>
         </div>
-      </div>
 
-      <div className="card left">
-        <div className="icon-tile" style={{ background: "#111a2e" }}>
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ color: "#6FC3F7" }} xmlns="http://www.w3.org/2000/svg">
-            <circle cx="9" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8"/>
-            <path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-            <circle cx="16.5" cy="7.5" r="2.4" stroke="currentColor" strokeWidth="1.6"/>
-            <path d="M14.8 13.2c2.6.2 4.7 2.2 4.7 5.3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-          </svg>
-        </div>
-        <div className="text">
+        {/* Lead Finder */}
+        <div className="card" id="card-lead">
+          <div className="icon-box ic-slate">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
           <h3>Lead Finder</h3>
-          <p>The right companies and people</p>
+          <p>{t[1]}</p>
         </div>
-      </div>
 
-      <div className="card right">
-        <div className="icon-tile" style={{ background: "#1e1330" }}>
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ color: "#B79CF0" }} xmlns="http://www.w3.org/2000/svg">
-            <path d="M21 3 L3 10.5 L10 13.2 L14.5 21 L21 3 Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/>
-            <path d="M21 3 L10 13.2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-          </svg>
-        </div>
-        <div className="text">
+        {/* Outreach */}
+        <div className="card" id="card-out">
+          <div className="icon-box ic-violet">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m22 2-7 20-4-9-9-4Z" />
+              <path d="M22 2 11 13" />
+            </svg>
+          </div>
           <h3>Outreach</h3>
-          <p>Personalized follow up</p>
+          <p>{t[2]}</p>
         </div>
-      </div>
 
-      <div className="card bottom-left">
-        <div className="icon-tile" style={{ background: "#17161a" }}>
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ color: "#ffffff" }} xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.7"/>
-            <path d="M10 8.3 L16 12 L10 15.7 Z" fill="currentColor"/>
-          </svg>
-        </div>
-        <div className="text">
+        {/* UGC Content */}
+        <div className="card" id="card-ugc">
+          <div className="icon-box ic-green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0c1a12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="10 8 16 12 10 16 10 8" fill="#0c1a12" />
+            </svg>
+          </div>
           <h3>UGC Content</h3>
-          <p>More ad tests</p>
+          <p>{t[3]}</p>
         </div>
-      </div>
 
-      <div className="card bottom-right">
-        <div className="icon-tile" style={{ background: "#1e1330" }}>
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ color: "#B79CF0" }} xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 4 H5.5 L7 15 H18 L20.5 7 H6.3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/>
-            <circle cx="9" cy="19" r="1.3" fill="currentColor"/>
-            <circle cx="16.5" cy="19" r="1.3" fill="currentColor"/>
-          </svg>
-        </div>
-        <div className="text">
+        {/* Post-Purchase */}
+        <div className="card" id="card-pp">
+          <div className="icon-box ic-coral">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+          </div>
           <h3>Post-Purchase</h3>
-          <p>More repeat purchases</p>
+          <p>{t[4]}</p>
         </div>
-      </div>
 
-      <div className="circle">
-        <div className="label">
-          <img
-            src="https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFNhoy6fH3FlD2JrvZNO0sSxTX8m1ofitkCjbp4"
-            alt="The Reach Smart"
-            style={{
-              width: "75%",
-              height: "75%",
-              objectFit: "contain",
-              borderRadius: "50%",
-              border: "1px solid rgba(255, 255, 255, 0.3)",
-              boxShadow: "0 4px 14px rgba(0,0,0,0.3)"
-            }}
-          />
-        </div>
+        <div className="noise-vignette"></div>
       </div>
-    </section>
+    </div>
   );
 }
