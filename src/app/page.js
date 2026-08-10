@@ -1,230 +1,26 @@
-"use client";
+import MainPage from "./MainPage";
 
-import React, { useState, useEffect, useRef } from "react";
-import { copy } from "./copy";
-
-// Component Imports
-import NavHeader from "../components/NavHeader";
-import HeroSection from "../components/HeroSection";
-import ProblemSection from "../components/ProblemSection";
-import SolutionSection from "../components/SolutionSection";
-import ServicesSection from "../components/ServicesSection";
-import HowItWorksSection from "../components/HowItWorksSection";
-import ProofSection from "../components/ProofSection";
-import WhyUsSection from "../components/WhyUsSection";
-import DiagnosticSection from "../components/DiagnosticSection";
-import FaqSection from "../components/FaqSection";
-import CtaSection from "../components/CtaSection";
-import ContactFormModal from "../components/ContactFormModal";
-import PrivacyPolicyModal from "../components/PrivacyPolicyModal";
-import FooterSection from "../components/FooterSection";
+export const metadata = {
+  title: "The Reach Smart — AI Automations for SaaS & E-commerce",
+  description: "Reach Smart builds AI systems for SaaS and e-commerce: 24/7 customer support, B2B lead discovery, personalized outreach, UGC ad content, and post-purchase communication.",
+  alternates: {
+    canonical: "https://thereachsmart.net",
+    languages: {
+      "en": "https://thereachsmart.net",
+      "bg": "https://thereachsmart.net/bg",
+      "fr": "https://thereachsmart.net/fr",
+      "x-default": "https://thereachsmart.net",
+    },
+  },
+  openGraph: {
+    title: "The Reach Smart — AI Automations for SaaS & E-commerce",
+    description: "AI systems that take over customer support, lead discovery, personalized outreach, UGC ad variations, and post-purchase communication.",
+    url: "https://thereachsmart.net",
+    locale: "en_US",
+    alternateLocale: ["bg_BG", "fr_FR"],
+  },
+};
 
 export default function Home() {
-  // Shared States
-  const [lang, setLang] = useState("bg");
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState(null);
-
-  // Form State
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-  const [formStatus, setFormStatus] = useState("idle");
-
-  // Load language preference
-  useEffect(() => {
-    const savedLang = localStorage.getItem("reach-smart-lang");
-    if (savedLang && (savedLang === "bg" || savedLang === "en" || savedLang === "fr")) {
-      setLang(savedLang);
-      document.documentElement.setAttribute("lang", savedLang);
-    } else {
-      localStorage.setItem("reach-smart-lang", "bg");
-    }
-  }, []);
-
-  // Language switcher
-  const handleLangChange = (newLang) => {
-    setLang(newLang);
-    localStorage.setItem("reach-smart-lang", newLang);
-    document.documentElement.setAttribute("lang", newLang);
-  };
-
-  // Nav shadow on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Form Submission
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email) return;
-
-    setFormStatus("loading");
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, lang }),
-      });
-
-      if (res.ok) {
-        setFormStatus("success");
-        setFormData({ name: "", email: "", company: "", message: "" });
-      } else {
-        setFormStatus("error");
-      }
-    } catch (err) {
-      console.error(err);
-      setFormStatus("error");
-    }
-  };
-
-  // IntersectionObserver for Scroll Reveals
-  const revealRefs = useRef([]);
-  revealRefs.current = [];
-  const addToRefs = (el) => {
-    if (el && !revealRefs.current.includes(el)) {
-      revealRefs.current.push(el);
-    }
-  };
-
-  useEffect(() => {
-    // Small timeout ensures all components have mounted and appended their refs
-    const timer = setTimeout(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target); // stop watching once visible
-            }
-          });
-        },
-        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
-      );
-
-      // Query all .reveal elements directly from the DOM — catches every section
-      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-      return () => observer.disconnect();
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const activeCopy = copy[lang] || copy.bg;
-
-  return (
-    <>
-      {/* Page wrapper — clips absolutely-positioned orb glows */}
-      <div className="page-wrapper">
-        {/* Background Decorative Glow Orbs */}
-        <div className="orb-glow orb-primary" />
-        <div className="orb-glow orb-secondary" />
-
-        {/* Navigation */}
-        <NavHeader
-          lang={lang}
-          isScrolled={isScrolled}
-          mobileMenuOpen={mobileMenuOpen}
-          setMobileMenuOpen={setMobileMenuOpen}
-          handleLangChange={handleLangChange}
-          setModalOpen={setModalOpen}
-          activeCopy={activeCopy}
-        />
-
-        {/* Main Sections */}
-        <main>
-          <HeroSection
-            activeCopy={activeCopy}
-            setModalOpen={setModalOpen}
-            lang={lang}
-          />
-          <ProblemSection
-            activeCopy={activeCopy}
-            addToRefs={addToRefs}
-          />
-          <SolutionSection
-            activeCopy={activeCopy}
-            addToRefs={addToRefs}
-          />
-          <ServicesSection
-            activeCopy={activeCopy}
-            addToRefs={addToRefs}
-            setModalOpen={setModalOpen}
-            lang={lang}
-          />
-          <HowItWorksSection
-            activeCopy={activeCopy}
-            addToRefs={addToRefs}
-          />
-          <ProofSection
-            activeCopy={activeCopy}
-            addToRefs={addToRefs}
-            lang={lang}
-          />
-          <WhyUsSection
-            activeCopy={activeCopy}
-            addToRefs={addToRefs}
-            lang={lang}
-          />
-          <DiagnosticSection
-            activeCopy={activeCopy}
-            setModalOpen={setModalOpen}
-            addToRefs={addToRefs}
-          />
-          <FaqSection
-            activeCopy={activeCopy}
-            addToRefs={addToRefs}
-            openFaq={openFaq}
-            setOpenFaq={setOpenFaq}
-          />
-          <CtaSection
-            activeCopy={activeCopy}
-            setModalOpen={setModalOpen}
-            addToRefs={addToRefs}
-          />
-        </main>
-
-        {/* Footer */}
-        <FooterSection
-          activeCopy={activeCopy}
-          setModalOpen={setModalOpen}
-          setPrivacyModalOpen={setPrivacyModalOpen}
-          lang={lang}
-        />
-      </div>
-
-      {/* Lead Capture Modal — outside wrapper so position:fixed works on all browsers */}
-      <ContactFormModal
-        modalOpen={modalOpen}
-        setModalOpen={setModalOpen}
-        formData={formData}
-        setFormData={setFormData}
-        formStatus={formStatus}
-        setFormStatus={setFormStatus}
-        handleFormSubmit={handleFormSubmit}
-        activeCopy={activeCopy}
-        lang={lang}
-      />
-
-      {/* Privacy Policy Modal */}
-      <PrivacyPolicyModal
-        isOpen={privacyModalOpen}
-        onClose={() => setPrivacyModalOpen(false)}
-        activeCopy={activeCopy}
-      />
-    </>
-  );
+  return <MainPage initialLang="en" />;
 }
