@@ -128,6 +128,9 @@ export const metadata = {
   manifest: "/site.webmanifest",
   verification: {
     google: "iFRkxqBcJhT61P02dEe2yTlrneOHCEkHvGPaWEjOmuI",
+    other: {
+      "msvalidate.01": "AA8D33CCC431B0217ECB68433913B5D8",
+    },
   },
 };
 
@@ -135,6 +138,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${instrumentSerif.variable}`}>
       <head>
+        <meta name="msvalidate.01" content="AA8D33CCC431B0217ECB68433913B5D8" />
         <JsonLd />
       </head>
       <body>
