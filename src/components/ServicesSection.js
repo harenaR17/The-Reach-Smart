@@ -14,7 +14,33 @@ function getIcon(name) {
   }
 }
 
-function ServiceCard({ item, onViewCaseStudy, onOpenDiagnostic, lang }) {
+function ServiceCard({ item, onViewCaseStudy, onOpenDiagnostic, lang, activeTab }) {
+  const handleCtaClick = () => {
+    if (typeof window !== "undefined") {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "service_cta_click",
+        service_name: item.title,
+        audience_category: activeTab,
+        cta_text: item.btnText || "See how it works",
+      });
+    }
+    onOpenDiagnostic();
+  };
+
+  const handleCaseStudyClick = () => {
+    if (typeof window !== "undefined") {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "case_study_view",
+        service_name: item.title,
+        audience_category: activeTab,
+        case_study_title: item.caseStudy?.headline || item.caseStudy?.title || item.caseStudy?.client || "",
+      });
+    }
+    onViewCaseStudy(item.caseStudy);
+  };
+
   return (
     <div className="card-raised service-card">
       <div className="card-icon-wrapper">{getIcon(item.icon)}</div>
@@ -40,7 +66,7 @@ function ServiceCard({ item, onViewCaseStudy, onOpenDiagnostic, lang }) {
 
       <div style={{ marginTop: "1.25rem" }}>
         <button
-          onClick={onOpenDiagnostic}
+          onClick={handleCtaClick}
           className="btn btn-secondary focus-ring"
           style={{ width: "100%", justifyContent: "center", fontSize: "0.875rem" }}
         >
@@ -50,7 +76,7 @@ function ServiceCard({ item, onViewCaseStudy, onOpenDiagnostic, lang }) {
 
       {item.caseStudy && (
         <button
-          onClick={() => onViewCaseStudy(item.caseStudy)}
+          onClick={handleCaseStudyClick}
           className="btn-case-study focus-ring"
           style={{
             display: "inline-flex",
@@ -106,13 +132,33 @@ export default function ServicesSection({ activeCopy, addToRefs, setModalOpen, l
           {/* Tab switcher */}
           <div className="tab-switcher" style={{ marginTop: "1.5rem" }}>
             <button
-              onClick={() => setActiveTab("saas")}
+              onClick={() => {
+                setActiveTab("saas");
+                if (typeof window !== "undefined") {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                    event: "services_tab_switch",
+                    tab_name: "saas",
+                    tab_label: s.tabSaaS,
+                  });
+                }
+              }}
               className={`tab-btn focus-ring ${activeTab === "saas" ? "active" : ""}`}
             >
               {s.tabSaaS}
             </button>
             <button
-              onClick={() => setActiveTab("ecom")}
+              onClick={() => {
+                setActiveTab("ecom");
+                if (typeof window !== "undefined") {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                    event: "services_tab_switch",
+                    tab_name: "ecom",
+                    tab_label: s.tabEcom,
+                  });
+                }
+              }}
               className={`tab-btn focus-ring ${activeTab === "ecom" ? "active" : ""}`}
             >
               {s.tabEcom}
@@ -125,6 +171,7 @@ export default function ServicesSection({ activeCopy, addToRefs, setModalOpen, l
             <ServiceCard
               key={i}
               item={item}
+              activeTab={activeTab}
               onViewCaseStudy={handleViewCaseStudy}
               onOpenDiagnostic={() => setModalOpen(true)}
               lang={lang}

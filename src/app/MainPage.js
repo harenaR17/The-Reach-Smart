@@ -91,7 +91,18 @@ export default function MainPage({ initialLang = "en" }) {
 
       if (res.ok) {
         setFormStatus("success");
-        setFormData({ name: "", email: "", company: "", message: "" });
+
+        if (typeof window !== "undefined") {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "generate_lead",
+            lead_company: formData.company || "",
+            lead_process: formData.processCategory || "",
+            lead_lang: lang,
+          });
+        }
+
+        setFormData({ name: "", email: "", company: "", message: "", processCategory: "", website: "" });
       } else {
         setFormStatus("error");
       }
