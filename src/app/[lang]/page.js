@@ -58,6 +58,20 @@ export async function generateMetadata({ params }) {
       url: canonicalUrl,
       locale: currentMeta.locale,
       alternateLocale: ["en_US", "bg_BG", "fr_FR"].filter((l) => l !== currentMeta.locale),
+      images: [
+        {
+          url: "https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFND4ZLKnzplyv6r3gcbp8teXz5di0fHO4BWjVx",
+          width: 1200,
+          height: 630,
+          alt: currentMeta.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: currentMeta.title,
+      description: currentMeta.description,
+      images: ["https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFND4ZLKnzplyv6r3gcbp8teXz5di0fHO4BWjVx"],
     },
   };
 }

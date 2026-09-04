@@ -78,18 +78,10 @@ export const metadata = {
     siteName: "The Reach Smart",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFND4ZLKnzplyv6r3gcbp8teXz5di0fHO4BWjVx",
         width: 1200,
         height: 630,
         alt: "The Reach Smart — AI Automation Systems for SaaS & E-commerce",
-        type: "image/jpeg",
-      },
-      {
-        url: "/og-image-square.jpg",
-        width: 1200,
-        height: 1200,
-        alt: "The Reach Smart Visual Logo",
-        type: "image/jpeg",
       },
     ],
     locale: "en_US",
@@ -100,7 +92,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "The Reach Smart — AI Automations for SaaS & E-commerce",
     description: "AI systems that handle support, lead gen, outreach, UGC, and post-purchase — built around your business.",
-    images: ["/og-image.jpg"],
+    images: ["https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFND4ZLKnzplyv6r3gcbp8teXz5di0fHO4BWjVx"],
   },
   robots: {
     index: true,
@@ -138,10 +130,31 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${instrumentSerif.variable}`}>
       <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KNT2N4BD');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
         <meta name="msvalidate.01" content="AA8D33CCC431B0217ECB68433913B5D8" />
         <JsonLd />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KNT2N4BD"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-9RXBGT3LLL"
