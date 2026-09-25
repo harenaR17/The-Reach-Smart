@@ -105,7 +105,7 @@ function ServiceCard({ item, onViewCaseStudy, onOpenDiagnostic, lang, activeTab 
   );
 }
 
-export default function ServicesSection({ activeCopy, addToRefs, setModalOpen, lang }) {
+export default function ServicesSection({ activeCopy, addToRefs, onCtaClick, lang }) {
   const [activeTab, setActiveTab] = useState("saas");
   const [selectedCase, setSelectedCase] = useState(null);
   const [caseModalOpen, setCaseModalOpen] = useState(false);
@@ -173,7 +173,7 @@ export default function ServicesSection({ activeCopy, addToRefs, setModalOpen, l
               item={item}
               activeTab={activeTab}
               onViewCaseStudy={handleViewCaseStudy}
-              onOpenDiagnostic={() => setModalOpen(true)}
+              onOpenDiagnostic={() => onCtaClick("services_card")}
               lang={lang}
             />
           ))}
@@ -221,7 +221,7 @@ export default function ServicesSection({ activeCopy, addToRefs, setModalOpen, l
                 ))}
               </ul>
               <button
-                onClick={() => setModalOpen(true)}
+                onClick={() => onCtaClick("services_custom")}
                 className="btn btn-primary focus-ring"
                 style={{ marginTop: "1.25rem", width: "100%", justifyContent: "center" }}
               >

@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "@/app/icons";
 import OrbitScene from "./OrbitScene";
 import OrbitScene2 from "./OrbitScene2";
 
-export default function HeroSection({ activeCopy, setModalOpen, lang }) {
+export default function HeroSection({ activeCopy, onCtaClick, lang }) {
   const highlights = activeCopy.hero.highlights || [];
 
   const heroBadges = [
@@ -100,7 +100,7 @@ export default function HeroSection({ activeCopy, setModalOpen, lang }) {
 
           <div className="hero-cta-group">
             <button
-              onClick={() => setModalOpen(true)}
+            onClick={() => onCtaClick()}
               className="btn btn-primary focus-ring"
             >
               {activeCopy.hero.cta}

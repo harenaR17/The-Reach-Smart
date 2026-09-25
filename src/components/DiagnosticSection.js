@@ -2,7 +2,7 @@
 import React from "react";
 import { CheckIcon, ArrowRightIcon } from "@/app/icons";
 
-export default function DiagnosticSection({ activeCopy, setModalOpen, addToRefs }) {
+export default function DiagnosticSection({ activeCopy, onCtaClick, addToRefs }) {
   if (!activeCopy?.diagnostic) return null;
 
   const { eyebrow, headline, subheadline, bullets, reassurance, btnText, microcopy } = activeCopy.diagnostic;
@@ -47,7 +47,7 @@ export default function DiagnosticSection({ activeCopy, setModalOpen, addToRefs 
 
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "center" }}>
               <button
-                onClick={() => setModalOpen(true)}
+                onClick={() => onCtaClick()}
                 className="btn btn-primary focus-ring"
                 style={{ padding: "1.125rem 2.5rem", fontSize: "1.0625rem" }}
               >

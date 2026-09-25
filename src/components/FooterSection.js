@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function FooterSection({ activeCopy, setModalOpen, setPrivacyModalOpen, lang }) {
+export default function FooterSection({ activeCopy, onCtaClick, setPrivacyModalOpen, lang }) {
   return (
     <footer style={{ borderTop: "1px solid var(--border-subtle)", padding: "4rem 0 2.5rem 0", backgroundColor: "#040612" }}>
       <div className="container">
@@ -44,7 +44,7 @@ export default function FooterSection({ activeCopy, setModalOpen, setPrivacyModa
                 {lang === "bg" ? "Контакт" : lang === "fr" ? "Contact" : "Contact"}
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", fontSize: "0.875rem", color: "var(--text-secondary)" }}>
-                <button onClick={() => setModalOpen(true)} className="focus-ring" style={{ textAlign: "left", color: "var(--brand-primary)", fontWeight: "600", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
+                <button onClick={() => onCtaClick()} className="focus-ring" style={{ textAlign: "left", color: "var(--brand-primary)", fontWeight: "600", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
                   {activeCopy.nav.cta}
                 </button>
                 <p>Silistra, Bulgaria</p>

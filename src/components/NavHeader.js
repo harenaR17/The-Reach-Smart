@@ -9,7 +9,7 @@ export default function NavHeader({
   mobileMenuOpen,
   setMobileMenuOpen,
   handleLangChange,
-  setModalOpen,
+  onCtaClick,
   activeCopy,
 }) {
   return (
@@ -61,7 +61,7 @@ export default function NavHeader({
             </div>
 
             <button
-              onClick={() => setModalOpen(true)}
+              onClick={() => onCtaClick("nav")}
               className="btn btn-primary focus-ring nav-cta"
             >
               {activeCopy.nav.cta}
@@ -98,7 +98,7 @@ export default function NavHeader({
             </a>
           ))}
           <button
-            onClick={() => { setModalOpen(true); setMobileMenuOpen(false); }}
+            onClick={() => { onCtaClick("nav_mobile"); setMobileMenuOpen(false); }}
             className="btn btn-primary focus-ring"
             style={{ marginTop: "0.5rem" }}
           >

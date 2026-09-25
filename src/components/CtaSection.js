@@ -2,7 +2,7 @@
 import React from "react";
 import { ArrowRightIcon } from "@/app/icons";
 
-export default function CtaSection({ activeCopy, setModalOpen, addToRefs }) {
+export default function CtaSection({ activeCopy, onCtaClick, addToRefs }) {
   return (
     <section style={{ position: "relative", padding: "8rem 0", overflow: "hidden" }}>
       {/* Glow effect */}
@@ -28,7 +28,7 @@ export default function CtaSection({ activeCopy, setModalOpen, addToRefs }) {
             {activeCopy.ctaSection.body}
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "center" }}>
-            <button onClick={() => setModalOpen(true)} className="btn btn-primary focus-ring" style={{ padding: "1.125rem 2.5rem", fontSize: "1.0625rem" }}>
+            <button onClick={() => onCtaClick()} className="btn btn-primary focus-ring" style={{ padding: "1.125rem 2.5rem", fontSize: "1.0625rem" }}>
               {activeCopy.ctaSection.btn}
               <ArrowRightIcon style={{ marginLeft: "10px", width: "18px", height: "18px" }} />
             </button>

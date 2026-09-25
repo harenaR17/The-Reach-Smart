@@ -19,6 +19,14 @@ import ContactFormModal from "../components/ContactFormModal";
 import PrivacyPolicyModal from "../components/PrivacyPolicyModal";
 import FooterSection from "../components/FooterSection";
 
+// ─── Analytics helpers ───────────────────────────────────────────
+function pushEvent(eventName, params = {}) {
+  if (typeof window !== "undefined") {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: eventName, ...params });
+  }
+}
+
 export default function MainPage({ initialLang = "en" }) {
   // Shared States
   const [lang, setLang] = useState(initialLang);
@@ -27,6 +35,12 @@ export default function MainPage({ initialLang = "en" }) {
   const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
+
+  // CTA click tracker
+  const trackCta = (location) => {
+    pushEvent("cta_click", { cta_location: location });
+    setModalOpen(true);
+  };
 
   // Form State
   const [formData, setFormData] = useState({
@@ -66,12 +80,28 @@ export default function MainPage({ initialLang = "en" }) {
     }
   };
 
-  // Nav shadow on scroll
+  // Nav shadow + scroll milestone tracking
   useEffect(() => {
+    const milestonesFired = new Set();
+    const milestones = [25, 50, 75];
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (docHeight <= 0) return;
+      const pct = Math.round((scrollTop / docHeight) * 100);
+
+      milestones.forEach((m) => {
+        if (pct >= m && !milestonesFired.has(m)) {
+          milestonesFired.add(m);
+          pushEvent("scroll_depth", { scroll_percentage: m });
+        }
+      });
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -159,7 +189,7 @@ export default function MainPage({ initialLang = "en" }) {
           mobileMenuOpen={mobileMenuOpen}
           setMobileMenuOpen={setMobileMenuOpen}
           handleLangChange={handleLangChange}
-          setModalOpen={setModalOpen}
+          onCtaClick={(location) => trackCta(location)}
           activeCopy={activeCopy}
         />
 
@@ -167,7 +197,7 @@ export default function MainPage({ initialLang = "en" }) {
         <main>
           <HeroSection
             activeCopy={activeCopy}
-            setModalOpen={setModalOpen}
+            onCtaClick={() => trackCta("hero")}
             lang={lang}
           />
           <ProblemSection
@@ -181,7 +211,7 @@ export default function MainPage({ initialLang = "en" }) {
           <ServicesSection
             activeCopy={activeCopy}
             addToRefs={addToRefs}
-            setModalOpen={setModalOpen}
+            onCtaClick={(loc) => trackCta(loc || "services")}
             lang={lang}
           />
           <HowItWorksSection
@@ -200,7 +230,7 @@ export default function MainPage({ initialLang = "en" }) {
           />
           <DiagnosticSection
             activeCopy={activeCopy}
-            setModalOpen={setModalOpen}
+            onCtaClick={() => trackCta("diagnostic")}
             addToRefs={addToRefs}
           />
           <FaqSection
@@ -211,7 +241,7 @@ export default function MainPage({ initialLang = "en" }) {
           />
           <CtaSection
             activeCopy={activeCopy}
-            setModalOpen={setModalOpen}
+            onCtaClick={() => trackCta("cta_section")}
             addToRefs={addToRefs}
           />
         </main>
@@ -219,7 +249,7 @@ export default function MainPage({ initialLang = "en" }) {
         {/* Footer */}
         <FooterSection
           activeCopy={activeCopy}
-          setModalOpen={setModalOpen}
+          onCtaClick={() => trackCta("footer")}
           setPrivacyModalOpen={setPrivacyModalOpen}
           lang={lang}
         />
