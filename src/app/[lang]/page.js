@@ -21,24 +21,25 @@ export async function generateMetadata({ params }) {
 
   const metadataMap = {
     en: {
-      title: "The Reach Smart — AI Automations for SaaS & E-commerce",
-      description: "Reach Smart builds AI systems for SaaS and e-commerce: 24/7 customer support, B2B lead discovery, personalized outreach, UGC ad content, and post-purchase communication.",
+      title: "AI Automation Agency for SaaS & E-commerce",
+      description: "Custom AI systems that automate customer support, B2B lead discovery, outbound outreach, and UGC ad testing. Book a free 30-min diagnostic.",
       locale: "en_US",
     },
     bg: {
-      title: "The Reach Smart — AI Автоматизации за SaaS & E-commerce",
-      description: "Reach Smart изгражда AI системи за SaaS и e-commerce: поддръжка на клиенти, lead generation, персонализиран outreach, UGC рекламно съдържание и комуникация след покупка.",
+      title: "AI Агенция за Автоматизации за SaaS & E-commerce",
+      description: "Изграждаме персонализирани AI системи за 24/7 клиентска поддръжка, lead generation, outreach и UGC реклами. Запазете безплатна диагностика.",
       locale: "bg_BG",
     },
     fr: {
-      title: "The Reach Smart — Automatisation IA pour SaaS & E-commerce",
-      description: "Reach Smart conçoit des systèmes d'IA sur mesure pour SaaS et e-commerce: support client 24/7, recherche de prospects B2B, outreach personnalisé et contenu UGC.",
+      title: "Agence d'Automatisation IA pour SaaS & E-commerce",
+      description: "Systèmes d'IA sur mesure pour support client 24/7, prospection B2B automatisée et création publicitaire UGC. Réservez un diagnostic gratuit.",
       locale: "fr_FR",
     },
   };
 
   const currentMeta = metadataMap[lang] || metadataMap.en;
   const canonicalUrl = lang === "en" ? "https://thereachsmart.net" : `https://thereachsmart.net/${lang}`;
+  const fullTitle = `${currentMeta.title} | The Reach Smart`;
 
   return {
     title: currentMeta.title,
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }) {
       },
     },
     openGraph: {
-      title: currentMeta.title,
+      title: fullTitle,
       description: currentMeta.description,
       url: canonicalUrl,
       locale: currentMeta.locale,
@@ -63,13 +64,13 @@ export async function generateMetadata({ params }) {
           url: "https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFND4ZLKnzplyv6r3gcbp8teXz5di0fHO4BWjVx",
           width: 1200,
           height: 630,
-          alt: currentMeta.title,
+          alt: fullTitle,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: currentMeta.title,
+      title: fullTitle,
       description: currentMeta.description,
       images: ["https://mrq02oy9yi.ufs.sh/f/MjT0Ey7Y1AFND4ZLKnzplyv6r3gcbp8teXz5di0fHO4BWjVx"],
     },

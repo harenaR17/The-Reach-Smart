@@ -93,7 +93,7 @@ export default function JsonLd() {
     "@id": "https://thereachsmart.net/#website",
     "name": "The Reach Smart",
     "url": "https://thereachsmart.net",
-    "description": "AI Automations for SaaS & E-commerce",
+    "description": "AI Automation Agency for SaaS & E-commerce",
     "publisher": { "@id": "https://thereachsmart.net/#organization" },
     "inLanguage": ["en", "bg", "fr"],
     "datePublished": "2026-01-15T00:00:00+02:00",
@@ -104,7 +104,7 @@ export default function JsonLd() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://thereachsmart.net/#webpage",
-    "name": "The Reach Smart — AI Automations for SaaS & E-commerce",
+    "name": "AI Automation Agency for SaaS & E-commerce | The Reach Smart",
     "speakable": {
       "@type": "SpeakableSpecification",
       "cssSelector": [".section-h2", ".hero-headline", ".faq-trigger", ".eyebrow"]
