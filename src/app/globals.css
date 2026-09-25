@@ -2051,3 +2051,116 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+/* ==========================================================================
+   STICKY CTA BAR
+   ========================================================================== */
+.sticky-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.875rem 1.5rem;
+  background: rgba(8, 10, 26, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-default);
+  box-shadow: 0 -8px 32px rgba(4, 6, 18, 0.55), 0 -1px 0 rgba(58, 91, 255, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.4s var(--ease-out);
+  pointer-events: none;
+}
+
+.sticky-cta-bar--visible {
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.sticky-cta-bar__copy {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  flex-shrink: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sticky-cta-bar__btn {
+  flex-shrink: 0;
+  padding: 0.625rem 1.375rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.sticky-cta-bar__close {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-tertiary);
+  transition: color var(--duration-fast) var(--ease-out), background var(--duration-fast) var(--ease-out);
+}
+
+.sticky-cta-bar__close:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 480px) {
+  .sticky-cta-bar__copy { display: none; }
+  .sticky-cta-bar { justify-content: space-between; padding: 0.75rem 1rem; }
+  .sticky-cta-bar__btn { flex: 1; justify-content: center; }
+}
+
+/* ==========================================================================
+   PASS 1 - MOBILE BOUNCE FIXES
+   ========================================================================== */
+
+/* 1. Clamp OrbitScene2 so 640px stage never escapes viewport before JS scale */
+.orbit-scene-2-wrap {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* 2. Drop backdrop-filter on orbit cards (GPU cost on Android) */
+  .orbit-scene-2-stage .card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(21, 19, 34, 0.92);
+  }
+
+  .float-badge {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(10, 12, 38, 0.95);
+  }
+
+  /* 3. Pause orb drift animations on mobile */
+  .orb-primary, .orb-secondary { animation: none !important; }
+  .orb-glow { width: 280px; height: 280px; opacity: 0.12; }
+
+  /* 4. Hero: remove dvh lock, tighten gaps so CTA is above fold */
+  .hero-section { min-height: unset; padding-bottom: 5rem; }
+  .hero-grid { gap: 1.5rem !important; }
+  .hero-h1 { margin-bottom: 0.875rem; }
+  .hero-sub { margin-bottom: 1.25rem; }
+
+  /* 5. Footer bottom clearance for sticky bar */
+  footer { padding-bottom: calc(2.5rem + 64px); }
+}
+
+/* 6. Larger lang-btn touch targets */
+.lang-btn { padding: 8px 12px; min-height: 36px; }
+
+/* 7. Remove global scroll-behavior smooth - breaks iOS momentum */
+html { scroll-behavior: auto; }

@@ -18,6 +18,7 @@ import CtaSection from "../components/CtaSection";
 import ContactFormModal from "../components/ContactFormModal";
 import PrivacyPolicyModal from "../components/PrivacyPolicyModal";
 import FooterSection from "../components/FooterSection";
+import StickyCtaBar from "../components/StickyCtaBar";
 
 // ─── Analytics helpers ───────────────────────────────────────────
 function pushEvent(eventName, params = {}) {
@@ -273,6 +274,13 @@ export default function MainPage({ initialLang = "en" }) {
         isOpen={privacyModalOpen}
         onClose={() => setPrivacyModalOpen(false)}
         activeCopy={activeCopy}
+      />
+
+      {/* Sticky CTA Bar — slides up after hero */}
+      <StickyCtaBar
+        activeCopy={activeCopy}
+        onCtaClick={trackCta}
+        modalOpen={modalOpen}
       />
     </>
   );
