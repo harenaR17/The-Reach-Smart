@@ -46,3 +46,5 @@ next-env.d.ts
 # cloudflare pages
 .vercel/output
 .cloudflare
+
+.analytics
