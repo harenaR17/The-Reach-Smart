@@ -96,7 +96,7 @@ export default function MainPage({ initialLang = "en" }) {
       milestones.forEach((m) => {
         if (pct >= m && !milestonesFired.has(m)) {
           milestonesFired.add(m);
-          pushEvent("scroll_depth", { scroll_percentage: m });
+          pushEvent("scroll_milestone", { percent_scrolled: m });
         }
       });
     };
