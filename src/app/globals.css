@@ -2115,6 +2115,10 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 255, 255, 0.06);
 }
 
+@media (min-width: 769px) {
+  .sticky-cta-bar { display: none; }
+}
+
 @media (max-width: 480px) {
   .sticky-cta-bar__copy { display: none; }
   .sticky-cta-bar { justify-content: space-between; padding: 0.75rem 1rem; }
